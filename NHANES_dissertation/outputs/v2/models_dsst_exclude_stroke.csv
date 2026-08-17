@@ -1,0 +1,3 @@
+"model","outcome","term","estimate","ci_lower","ci_upper","p_value","n_used"
+"M6: exclude stroke","CFDDS","acb_burden",-1.22913692985513,-1.89309934558137,-0.565174514128896,0.00129462381796707,1368
+"M6: exclude stroke","CFDDS","n_drugs",-0.541205281764039,-0.846337519590699,-0.236073043937379,0.00181415294973383,1368

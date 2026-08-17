@@ -1,0 +1,15 @@
+# Python dependencies for this dissertation project.
+# Install with:  pip install -r requirements.txt
+#
+# Only the Python scripts need these. The statistical analysis that produces every
+# number in the dissertation runs in R - see code/00_install_packages.R.
+
+pandas>=2.0            # 01, 02 (exploration)
+pyreadstat>=1.2        # reading NHANES .xpt files in the Python scripts
+numpy>=1.24            # 01, 02
+PyMuPDF>=1.24          # 08_extract_iacb.py - reads IACB scores out of the supplied PDF
+python-docx>=1.1       # writeup/drafts/build_docx.py - renders the dissertation .docx
+
+# Note: code/archive/05_main_analysis.py additionally needs `samplics` and
+# `statsmodels`. That script is superseded and not required to reproduce any
+# dissertation result, so those packages are deliberately not listed here.

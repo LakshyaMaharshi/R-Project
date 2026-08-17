@@ -1,0 +1,86 @@
+# ---------------------------------------------------------------------------
+# What is shared
+#
+#   NHANES_dissertation/   the analysis bundle: code, data, outputs, dissertation
+#
+# Everything else in this working directory is drafting scaffolding, private
+# correspondence, or third-party material, and is deliberately kept out.
+# ---------------------------------------------------------------------------
+
+# --- Private working material: drafts, emails, planning, progress notes ------
+_working/
+
+# --- Internal notes and agent tooling (local use only) -----------------------
+CLAUDE.md
+CLAUDE_DISSERTATION_PLAYBOOK.md
+ORCHESTRATION_PLAYBOOK.md
+.claude/
+.agents/
+.mcp.json
+skills-lock.json
+
+# --- Private supervisor correspondence filed under reference/ by mistake -----
+# These are emails from the supervisor and contain personal addresses.
+NHANES_dissertation/reference/new message*.pdf
+
+# --- Third-party / institutional documents -----------------------------------
+# This repository is public, so neither the IACB preprint (Fleetwood et al.,
+# SSRN 3777231) nor the UEA assessment brief is redistributed here. See
+# NHANES_dissertation/reference/README.md for where to obtain the preprint if
+# you want to re-run 08_extract_iacb.py; data/iacb_scores.csv is supplied.
+NHANES_dissertation/reference/ssrn-*.pdf
+NHANES_dissertation/reference/*Assessment*Brief*.docx
+
+# --- Office / Word lock and autosave files -----------------------------------
+~$*
+*.asd
+*.wbk
+*_UPDATED.docx
+
+# --- R -----------------------------------------------------------------------
+.Rhistory
+.Rapp.history
+.RData
+.Rdata
+.Ruserdata
+.Rproj.user/
+*.Rproj
+*.rdb
+*.rdx
+*_cache/
+*.Rcheck/
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# --- Credentials -------------------------------------------------------------
+.env
+.env.*
+*.pem
+*.key
+
+# --- Editors -----------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ----------------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/

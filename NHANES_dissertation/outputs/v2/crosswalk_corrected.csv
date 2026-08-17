@@ -1,0 +1,700 @@
+"drug","is_combination","n_components","boustani_score","boustani_max","iacb_score","iacb_max","b_found","i_found","b_unresolved","i_unresolved","b_syn","i_syn","boustani_status","iacb_status","on_both"
+"acetaminophen; butalbital",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"acetaminophen; butalbital; caffeine",TRUE,3,0,0,1,1,0,1,3,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"acetaminophen; butalbital; caffeine; codeine",TRUE,4,1,1,1,1,1,1,3,3,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"acetaminophen; caffeine; isometheptene mucate",TRUE,3,0,0,1,1,0,1,3,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"acetaminophen; codeine",TRUE,2,1,1,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"acetaminophen; hydrocodone",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"acetaminophen; oxycodone",TRUE,2,0,0,2,2,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"acetaminophen; pseudoephedrine",TRUE,2,0,0,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"acetaminophen; tramadol",TRUE,2,0,0,2,2,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"adapalene; benzoyl peroxide topical",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"albuterol; ipratropium",TRUE,2,0,0,1,1,1,2,1,0,FALSE,TRUE,"c. combination, partly on list","c. combination, all components on list",TRUE
+"alendronate; cholecalciferol",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"aliskiren; hydrochlorothiazide",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"alogliptin; pioglitazone",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"amiloride; hydrochlorothiazide",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"amlodipine; atorvastatin",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"amlodipine; benazepril",TRUE,2,0,0,1,1,2,1,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"amlodipine; hydrochlorothiazide; olmesartan",TRUE,3,0,0,1,1,1,1,2,2,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"amlodipine; hydrochlorothiazide; valsartan",TRUE,3,0,0,1,1,1,1,2,2,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"amlodipine; olmesartan",TRUE,2,0,0,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"amlodipine; valsartan",TRUE,2,0,0,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"amoxicillin; clavulanate",TRUE,2,0,0,0,0,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"amphetamine; dextroamphetamine",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"antipyrine; benzocaine otic",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"aspirin; butalbital; caffeine",TRUE,3,0,0,1,1,1,1,2,2,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"aspirin; dipyridamole",TRUE,2,1,1,1,1,2,1,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"atenolol; chlorthalidone",TRUE,2,1,1,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"atropine; diphenoxylate",TRUE,2,3,3,4,4,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"atropine; hyoscyamine; phenobarbital; scopolamine",TRUE,4,6,3,12,4,4,3,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"azelastine; fluticasone nasal",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"bacitracin; hydrocortisone; neomycin; polymyxin b topical",TRUE,4,1,1,2,2,2,1,2,3,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"benazepril; hydrochlorothiazide",TRUE,2,0,0,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"benzoyl peroxide; clindamycin topical",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"betamethasone; clotrimazole topical",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"bisoprolol; hydrochlorothiazide",TRUE,2,0,0,0,0,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"brimonidine; brinzolamide ophthalmic",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"brimonidine; timolol ophthalmic",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"brompheniramine; dextromethorphan; pseudoephedrine",TRUE,3,3,3,6,4,3,3,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"brompheniramine; pseudoephedrine",TRUE,2,3,3,5,4,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"budesonide; formoterol",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"buprenorphine; naloxone",TRUE,2,0,0,2,2,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"captopril; hydrochlorothiazide",TRUE,2,1,1,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"carbetapentane; chlorpheniramine",TRUE,2,0,0,4,4,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"carbidopa; entacapone; levodopa",TRUE,3,0,0,0,0,3,3,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"carbidopa; levodopa",TRUE,2,0,0,0,0,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"cetirizine; pseudoephedrine",TRUE,2,1,1,5,4,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"chlordiazepoxide; clidinium",TRUE,2,1,1,0,0,2,0,0,2,FALSE,FALSE,"c. combination, all components on list","d. combination, no component on list (scores 0)",FALSE
+"chlorpheniramine; dextromethorphan; pseudoephedrine",TRUE,3,0,0,6,4,2,3,1,0,FALSE,FALSE,"c. combination, partly on list","c. combination, all components on list",TRUE
+"chlorpheniramine; hydrocodone",TRUE,2,0,0,4,4,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"ciprofloxacin; dexamethasone otic",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"ciprofloxacin; hydrocortisone otic",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"clindamycin; tretinoin topical",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"codeine; guaifenesin",TRUE,2,1,1,1,1,2,1,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"codeine; phenylephrine; promethazine",TRUE,3,4,3,4,4,3,1,0,2,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"conjugated estrogens; medroxyprogesterone",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"desloratadine; pseudoephedrine",TRUE,2,1,1,5,4,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"desogestrel; ethinyl estradiol",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"dexamethasone; neomycin; polymyxin b ophthalmic",TRUE,3,0,0,2,2,2,1,1,2,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"dexamethasone; tobramycin ophthalmic",TRUE,2,0,0,2,2,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"dextromethorphan; guaifenesin; phenylephrine",TRUE,3,0,0,2,1,3,2,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"dextromethorphan; promethazine",TRUE,2,3,3,5,4,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"dextromethorphan; pseudoephedrine",TRUE,2,0,0,2,1,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"diphenhydramine; pseudoephedrine",TRUE,2,3,3,5,4,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"dorzolamide; timolol ophthalmic",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"drospirenone; ethinyl estradiol",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"drospirenone; ethinyl estradiol; levomefolate",TRUE,3,0,0,0,0,0,0,3,3,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"dutasteride; tamsulosin",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"efavirenz; emtricitabine; tenofovir",TRUE,3,0,0,0,0,0,0,3,3,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"emtricitabine; rilpivirine; tenofovir",TRUE,3,0,0,0,0,0,0,3,3,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"emtricitabine; tenofovir",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"enalapril; hydrochlorothiazide",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"esterified estrogens; methyltestosterone",TRUE,2,0,0,0,0,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"estradiol; norethindrone",TRUE,2,0,0,0,0,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"estradiol; norgestimate",TRUE,2,0,0,0,0,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"ethinyl estradiol; ethynodiol",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"ethinyl estradiol; etonogestrel",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"ethinyl estradiol; levonorgestrel",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"ethinyl estradiol; norelgestromin",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"ethinyl estradiol; norethindrone",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"ethinyl estradiol; norgestimate",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"ethinyl estradiol; norgestrel",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"ezetimibe; simvastatin",TRUE,2,0,0,0,0,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"fluoxetine; olanzapine",TRUE,2,3,3,4,3,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"fluticasone; salmeterol",TRUE,2,0,0,0,0,2,0,0,2,FALSE,FALSE,"c. combination, all components on list","d. combination, no component on list (scores 0)",FALSE
+"fluticasone; vilanterol",TRUE,2,0,0,0,0,2,0,0,2,FALSE,FALSE,"c. combination, all components on list","d. combination, no component on list (scores 0)",FALSE
+"formoterol; mometasone",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"fosinopril; hydrochlorothiazide",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"glipizide; metformin",TRUE,2,0,0,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"glyburide; metformin",TRUE,2,0,0,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"guaifenesin; hydrocodone",TRUE,2,0,0,1,1,2,1,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"guaifenesin; phenylephrine",TRUE,2,0,0,1,1,2,1,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"homatropine; hydrocodone",TRUE,2,0,0,0,0,2,0,0,2,FALSE,FALSE,"c. combination, all components on list","d. combination, no component on list (scores 0)",FALSE
+"hydralazine; isosorbide dinitrate",TRUE,2,1,1,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"hydrochlorothiazide; irbesartan",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"hydrochlorothiazide; lisinopril",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"hydrochlorothiazide; losartan",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"hydrochlorothiazide; olmesartan",TRUE,2,0,0,1,1,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"hydrochlorothiazide; quinapril",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"hydrochlorothiazide; spironolactone",TRUE,2,0,0,0,0,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"hydrochlorothiazide; telmisartan",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"hydrochlorothiazide; triamterene",TRUE,2,1,1,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"hydrochlorothiazide; valsartan",TRUE,2,0,0,1,1,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"hydrocodone; ibuprofen",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"hydrocortisone; neomycin; polymyxin b otic",TRUE,3,1,1,2,2,2,1,1,2,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"insulin aspart; insulin aspart protamine",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"insulin isophane; insulin regular",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"insulin lispro; insulin lispro protamine",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"lidocaine; prilocaine topical",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"linagliptin; metformin",TRUE,2,0,0,1,1,2,1,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"loratadine; pseudoephedrine",TRUE,2,1,1,5,4,2,2,0,0,FALSE,FALSE,"c. combination, all components on list","c. combination, all components on list",TRUE
+"loteprednol; tobramycin ophthalmic",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"metformin; pioglitazone",TRUE,2,0,0,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"metformin; saxagliptin",TRUE,2,0,0,1,1,2,1,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"metformin; sitagliptin",TRUE,2,0,0,1,1,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"neomycin; polymyxin b sulfate topical",TRUE,2,0,0,0,0,1,0,1,2,FALSE,FALSE,"c. combination, partly on list","d. combination, no component on list (scores 0)",FALSE
+"nystatin; triamcinolone topical",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"omeprazole; sodium bicarbonate",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"phentermine; topiramate",TRUE,2,0,0,3,3,1,1,1,1,FALSE,FALSE,"c. combination, partly on list","c. combination, partly on list",TRUE
+"polymyxin b; trimethoprim ophthalmic",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"pseudoephedrine; triprolidine",TRUE,2,0,0,1,1,2,1,0,1,FALSE,FALSE,"c. combination, all components on list","c. combination, partly on list",TRUE
+"simvastatin; sitagliptin",TRUE,2,0,0,0,0,0,0,2,2,FALSE,FALSE,"d. combination, no component on list (scores 0)","d. combination, no component on list (scores 0)",FALSE
+"sulfamethoxazole; trimethoprim",TRUE,2,0,0,0,0,0,1,2,1,FALSE,FALSE,"d. combination, no component on list (scores 0)","c. combination, partly on list",FALSE
+"trandolapril; verapamil",TRUE,2,0,0,0,0,2,0,0,2,FALSE,FALSE,"c. combination, all components on list","d. combination, no component on list (scores 0)",FALSE
+"55555",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"77777",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"99999",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"abatacept",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"abiraterone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"acarbose",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"acetazolamide",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"acyclovir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"adalimumab",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"aflibercept ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"agomelatine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"albuterol",FALSE,1,0,0,0,0,0,1,1,0,FALSE,TRUE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"alcaftadine ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"alendronate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"alfuzosin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"aliskiren",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"allopurinol",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"alprazolam",FALSE,1,1,1,2,2,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"amantadine",FALSE,1,2,2,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"amiodarone",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"amitriptyline",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"amlodipine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"ammonium lactate topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"amoxicillin",FALSE,1,0,0,0,0,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","a. confirmed score zero",TRUE
+"amphetamine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ampicillin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"anastrozole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"antacids - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"anti-infectives - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"antihyperlipidemic agents - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"antihypertensive agents - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"apixaban",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"arformoterol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"aripiprazole",FALSE,1,1,1,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"armodafinil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"asenapine",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"aspirin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"atazanavir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"atenolol",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"atomoxetine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"atorvastatin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"azathioprine",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"azelaic acid topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"azelastine nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"azelastine ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"azilsartan",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"azithromycin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"bacitracin topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"baclofen",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"balsalazide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"beclomethasone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"beclomethasone nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"benazepril",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"benzonatate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"benzoyl peroxide topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"benztropine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"besifloxacin ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"betamethasone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"betaxolol",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"betaxolol ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"bethanechol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"bicalutamide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"bimatoprost ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"bisacodyl",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"bisoprolol",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"brimonidine ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"brinzolamide ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"bromocriptine",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"budesonide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"budesonide nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"bumetanide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"buprenorphine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"bupropion",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"buspirone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"butalbital",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"calcipotriene topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"calcitonin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"calcium acetate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"camphor topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"canagliflozin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"candesartan",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"capecitabine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"capsaicin topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"captopril",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"carbamazepine",FALSE,1,2,2,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"carbidopa",FALSE,1,0,0,0,0,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","a. confirmed score zero",TRUE
+"carboplatin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cardiovascular agents - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"carisoprodol",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"carvedilol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cefdinir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cefprozil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ceftriaxone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cefuroxime",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"celecoxib",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"cephalexin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cetirizine",FALSE,1,1,1,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"chlordiazepoxide",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"chlorhexidine topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"chloroquine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"chlorpromazine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"chlorpropamide",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"chlorthalidone",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"chlorzoxazone",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"cholestyramine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ciclesonide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ciclesonide nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ciclopirox topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cilostazol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cimetidine",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"cinacalcet",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ciprofloxacin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ciprofloxacin ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ciprofloxacin otic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"citalopram",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"clarithromycin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"clindamycin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"clindamycin topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"clobazam",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"clobetasol topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"clomiphene",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"clomipramine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"clonazepam",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"clonidine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"clopidogrel",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"clotrimazole topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"clozapine",FALSE,1,3,3,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"codeine",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"colchicine",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"colesevelam",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"colestipol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"collagenase topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"conjugated estrogens",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"conjugated estrogens topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"contraceptives - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"corticotropin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"crotamiton topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cyanocobalamin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cyclobenzaprine",FALSE,1,2,2,2,2,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"cyclophosphamide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cyclosporine",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"cyclosporine ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"cyproheptadine",FALSE,1,2,2,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"dabigatran",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dapagliflozin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dapsone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dapsone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"darifenacin",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"darunavir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"deflazacort",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"denosumab",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dermatological agents - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"desipramine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"desloratadine",FALSE,1,1,1,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"desmopressin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"desonide topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"desoximetasone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"desvenlafaxine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"dexamethasone",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"dexlansoprazole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dexmethylphenidate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dextroamphetamine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"diazepam",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"diclofenac",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"diclofenac ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"diclofenac topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dicyclomine",FALSE,1,0,0,4,4,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"difluprednate ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"digoxin",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"diltiazem",FALSE,1,0,0,0,0,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","a. confirmed score zero",TRUE
+"diphenhydramine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"diuretics - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"divalproex sodium",FALSE,1,0,0,3,3,0,1,1,0,FALSE,TRUE,"d. unlisted, identifiable (scores 0)","b. synonym match",FALSE
+"docetaxel",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"docusate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dofetilide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"domperidone",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"donepezil",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"dornase alfa",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dorzolamide ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"doxazosin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"doxepin",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"doxycycline",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"dronabinol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"dronedarone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"duloxetine",FALSE,1,0,0,0,0,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","a. confirmed score zero",TRUE
+"dutasteride",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"econazole topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"eletriptan",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"emollients topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"emtricitabine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"enalapril",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"enoxaparin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"entecavir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"epinephrine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"eplerenone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"erythromycin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"erythromycin ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"escitalopram",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"esomeprazole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"estradiol",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"estradiol topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"estrogens - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"estrone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"eszopiclone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"etanercept",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ethacrynic acid",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ethambutol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"etodolac",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"etonogestrel",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"etravirine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"exemestane",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"exenatide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ezetimibe",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"famotidine",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"febuxostat",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"felodipine",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"fenofibrate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fenofibric acid",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fentanyl",FALSE,1,1,1,2,2,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"fesoterodine",FALSE,1,3,3,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"fexofenadine",FALSE,1,0,0,4,4,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"finasteride",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fingolimod",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"flecainide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluconazole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fludrocortisone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"flunisolide nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluocinolone otic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluocinolone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluocinonide topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluoride topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluorometholone ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluoxetine",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"fluphenazine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"flurazepam",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"fluticasone",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"fluticasone nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluticasone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"fluvoxamine",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"formoterol",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"fosinopril",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"frovatriptan",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"furosemide",FALSE,1,1,1,0,0,1,1,0,0,FALSE,FALSE,"b. exact match","a. confirmed score zero",TRUE
+"gabapentin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"galantamine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"gatifloxacin ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"gemfibrozil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"gentamicin ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"glatiramer",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"glimepiride",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"glipizide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"glyburide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"glycopyrrolate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"griseofulvin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"guaifenesin",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"guanfacine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"halcinonide topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"haloperidol",FALSE,1,1,1,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"heparin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"hormones/hormone modifiers - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"hydralazine",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"hydrochlorothiazide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"hydrocodone",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"hydrocortisone",FALSE,1,1,1,2,2,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"hydrocortisone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"hydromorphone",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"hydroquinone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"hydroxychloroquine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"hydroxyzine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"hyoscyamine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"ibandronate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ibuprofen",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"icosapent",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"iloperidone",FALSE,1,1,1,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"imatinib",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"imipramine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"indacaterol",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"indapamide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"indomethacin",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"infliximab",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"insulin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"insulin aspart",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"insulin detemir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"insulin glargine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"insulin glulisine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"insulin isophane (nph)",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"insulin lispro",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"insulin regular",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"interferon beta-1a",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ipratropium",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"ipratropium nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"irbesartan",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"isoniazid",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"isosorbide",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"isosorbide dinitrate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"isosorbide mononitrate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"isotretinoin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ketoconazole topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ketorolac",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"ketorolac ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"labetalol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lacosamide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lactic acid topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lactulose",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lamotrigine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lansoprazole",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"lapatinib",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"latanoprost ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"leflunomide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"letrozole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"leuprolide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"levalbuterol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"levetiracetam",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"levobunolol ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"levocetirizine",FALSE,1,1,1,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"levofloxacin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"levomilnacipran",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"levothyroxine",FALSE,1,0,0,0,0,0,1,1,0,FALSE,TRUE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"lidocaine topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"linaclotide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"linagliptin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"liothyronine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"liraglutide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lisdexamfetamine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lisinopril",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lithium",FALSE,1,0,0,1,1,1,1,0,0,FALSE,TRUE,"a. confirmed score zero","b. synonym match",TRUE
+"loperamide",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"loratadine",FALSE,1,1,1,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"lorazepam",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"losartan",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"loteprednol ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"lovastatin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"loxapine",FALSE,1,2,2,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"lubiprostone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"meclizine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"medroxyprogesterone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mefenamic acid",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"megestrol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"meloxicam",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"memantine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"menotropins",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"meprobamate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mercaptopurine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mesalamine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"metaxalone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"metformin",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"methadone",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"methazolamide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"methimazole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"methocarbamol",FALSE,1,3,3,2,2,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"methotrexate",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"methyclothiazide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"methyldopa",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"methylnaltrexone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"methylphenidate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"methylprednisolone",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"metoclopramide",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"metolazone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"metoprolol",FALSE,1,1,1,0,0,1,1,0,0,FALSE,FALSE,"b. exact match","a. confirmed score zero",TRUE
+"metronidazole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"metronidazole topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mexiletine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"miconazole topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"midodrine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"miglitol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"milnacipran",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"minocycline",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"minoxidil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mirabegron",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"mirtazapine",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"modafinil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mometasone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mometasone nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mometasone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"montelukast",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"morphine",FALSE,1,1,1,2,2,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"mouth and throat products - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"moxifloxacin ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"multivitamin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mupirocin topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mycophenolate mofetil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"mycophenolic acid",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nabumetone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nadolol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"naltrexone",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"naproxen",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"natalizumab",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nateglinide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nebivolol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"niacin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nicotine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nifedipine",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"nitrazepam",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"nitrofurantoin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nitroglycerin",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"nizatidine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"norethindrone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nortriptyline",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"nystatin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"nystatin topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ofloxacin ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ofloxacin otic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"olanzapine",FALSE,1,3,3,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"olmesartan",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"olopatadine nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"olopatadine ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"omega-3 polyunsaturated fatty acids",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"omeprazole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"onabotulinumtoxina",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ondansetron",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ophthalmic anti-infectives - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"orphenadrine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"oseltamivir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"oxaprozin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"oxcarbazepine",FALSE,1,2,2,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"oxybutynin",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"oxycodone",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"oxygen",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"oxymorphone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"paliperidone",FALSE,1,1,1,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"pancrelipase",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pantoprazole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"paroxetine",FALSE,1,3,3,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"pegfilgrastim",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"peginterferon alfa-2a",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"penicillin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"penicillin v potassium",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pentosan polysulfate sodium",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pentoxifylline",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pepsin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"permethrin topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"perphenazine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"phenazopyridine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"phenobarbital",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"phentermine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"phenytoin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"pilocarpine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pimecrolimus topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pioglitazone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"piroxicam",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pitavastatin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"polyethylene glycol 3350",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"polymyxin b sulfate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"potassium chloride",FALSE,1,0,0,1,1,0,1,1,0,FALSE,TRUE,"d. unlisted, identifiable (scores 0)","b. synonym match",FALSE
+"potassium citrate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"povidone iodine ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pramipexole",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"prasugrel",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pravastatin",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"prazosin",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"prednisolone",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"prednisolone ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"prednisone",FALSE,1,1,1,2,2,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"pregabalin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"primidone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"probenecid",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"prochlorperazine",FALSE,1,0,0,4,4,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"progesterone",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"progesterone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"promethazine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"propafenone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"propranolol",FALSE,1,0,0,0,0,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","a. confirmed score zero",TRUE
+"propylthiouracil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"pseudoephedrine",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"pyridostigmine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"quetiapine",FALSE,1,3,3,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"quinapril",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"quinidine",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"quinine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rabeprazole",FALSE,1,0,0,0,0,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","a. confirmed score zero",TRUE
+"raloxifene",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"raltegravir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ramipril",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ranitidine",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"ranitidine bismuth citrate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ranolazine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rasagiline",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"repaglinide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"respiratory agents - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ribavirin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rifampin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rifaximin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"risedronate",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"risperidone",FALSE,1,1,1,3,3,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"ritonavir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rivaroxaban",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rivastigmine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rizatriptan",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"roflumilast",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ropinirole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rosuvastatin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"rotigotine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"salmeterol",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"saxagliptin",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"selenium sulfide topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"senna",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sertraline",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"sevelamer",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sex hormones - unspecified",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sildenafil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"silodosin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"silver sulfadiazine topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"simeprevir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"simvastatin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sitagliptin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sodium chloride",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sofosbuvir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"solifenacin",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"somatropin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sorafenib",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sotalol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"spironolactone",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"sucralfate",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"sulfamethoxazole",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sulfasalazine",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"sulindac",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"sumatriptan",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"tacrolimus",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"tacrolimus topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"tadalafil",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"tamoxifen",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"tamsulosin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"tapentadol",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"tazarotene topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"telmisartan",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"temazepam",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"terazosin",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"terbinafine",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"testosterone",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"tetracycline",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"theophylline",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"thyroid desiccated",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ticagrelor",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"timolol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"timolol ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"tiotropium",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"tizanidine",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"tobramycin ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"tolterodine",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"topiramate",FALSE,1,0,0,3,3,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"torsemide",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"tramadol",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"trandolapril",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"tranexamic acid",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"trastuzumab",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"travoprost ophthalmic",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"trazodone",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"tretinoin topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"triamcinolone",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"triamcinolone nasal",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"triamcinolone topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"triamterene",FALSE,1,1,1,0,0,1,0,0,1,FALSE,FALSE,"b. exact match","d. unlisted, identifiable (scores 0)",FALSE
+"triazolam",FALSE,1,0,0,2,2,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"trihexyphenidyl",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"trimethoprim",FALSE,1,0,0,0,0,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","a. confirmed score zero",FALSE
+"triprolidine",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"trospium",FALSE,1,3,3,4,4,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"urea topical",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ursodiol",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"ustekinumab",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"valacyclovir",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"valproic acid",FALSE,1,0,0,3,3,1,1,0,0,FALSE,TRUE,"a. confirmed score zero","b. synonym match",TRUE
+"valsartan",FALSE,1,0,0,1,1,0,1,1,0,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","b. exact match",FALSE
+"vardenafil",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"varenicline",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"venlafaxine",FALSE,1,1,1,1,1,1,1,0,0,FALSE,FALSE,"b. exact match","b. exact match",TRUE
+"verapamil",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"vilazodone",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"warfarin",FALSE,1,1,1,1,1,1,1,0,0,FALSE,TRUE,"b. exact match","b. synonym match",TRUE
+"zafirlukast",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"zaleplon",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
+"ziprasidone",FALSE,1,0,0,3,3,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"zoledronic acid",FALSE,1,0,0,0,0,0,0,1,1,FALSE,FALSE,"d. unlisted, identifiable (scores 0)","d. unlisted, identifiable (scores 0)",FALSE
+"zolmitriptan",FALSE,1,0,0,1,1,1,1,0,0,FALSE,FALSE,"a. confirmed score zero","b. exact match",TRUE
+"zolpidem",FALSE,1,0,0,0,0,1,0,0,1,FALSE,FALSE,"a. confirmed score zero","d. unlisted, identifiable (scores 0)",FALSE
