@@ -22,21 +22,16 @@
 library(haven); library(survey); library(dplyr); library(tidyr)
 options(survey.lonely.psu = "adjust")
 
-args_full <- commandArgs(trailingOnly = FALSE)
-file_arg  <- grep("^--file=", args_full, value = TRUE)
-script_dir <- if (length(file_arg) > 0) {
-  dirname(normalizePath(sub("^--file=", "", file_arg[1]), winslash = "/", mustWork = FALSE))
-} else normalizePath(getwd(), winslash = "/", mustWork = FALSE)
-base_dir <- file.path(script_dir, "..")
-data_dir <- file.path(base_dir, "data")
-out_dir  <- file.path(base_dir, "outputs", "v2")
-dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+# Paths and which NHANES cycle to run both come from config.R - see there. Pass
+# --cycle=2011-2012 to run the validation cycle; no argument means the dissertation cycle.
+.f <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
+source(file.path(if (length(.f)) dirname(sub("^--file=", "", .f[1])) else ".", "config.R"))
 
-demo <- read_xpt(file.path(data_dir, "DEMO_H.xpt"))
-rxq  <- read_xpt(file.path(data_dir, "RXQ_RX_H.xpt"))
-cfq  <- read_xpt(file.path(data_dir, "CFQ_H.xpt"))
-acb  <- read.csv(file.path(data_dir, "aas_combined.csv"), stringsAsFactors = FALSE)
-iacb <- read.csv(file.path(data_dir, "iacb_scores.csv"), stringsAsFactors = FALSE)
+demo <- read_xpt(xpt("DEMO"))
+rxq  <- read_xpt(xpt("RXQ_RX"))
+cfq  <- read_xpt(xpt("CFQ"))
+acb  <- read.csv(file.path(scales_dir, "aas_combined.csv"), stringsAsFactors = FALSE)
+iacb <- read.csv(file.path(scales_dir, "iacb_scores.csv"), stringsAsFactors = FALSE)
 
 norm <- function(x) tolower(trimws(as.character(x)))
 
@@ -197,17 +192,17 @@ expo <- rx %>% group_by(SEQN) %>% summarise(
 ## comorbidities (same optional files as 05) ------------------------------------
 yn <- function(x) ifelse(x == 1, 1L, ifelse(x == 2, 0L, NA_integer_))
 como <- tibble(SEQN = demo$SEQN)
-if (file.exists(file.path(data_dir, "MCQ_H.xpt"))) {
-  mcq <- read_xpt(file.path(data_dir, "MCQ_H.xpt"))
+if (file.exists(xpt("MCQ"))) {
+  mcq <- read_xpt(xpt("MCQ"))
   como <- left_join(como, mcq %>% transmute(SEQN, stroke = yn(MCQ160F),
     cvd = pmax(yn(MCQ160B), yn(MCQ160C), yn(MCQ160D), yn(MCQ160E), na.rm = TRUE)), by = "SEQN")
 }
-if (file.exists(file.path(data_dir, "DIQ_H.xpt"))) {
-  como <- left_join(como, read_xpt(file.path(data_dir, "DIQ_H.xpt")) %>%
+if (file.exists(xpt("DIQ"))) {
+  como <- left_join(como, read_xpt(xpt("DIQ")) %>%
                       transmute(SEQN, diabetes = yn(DIQ010)), by = "SEQN")
 }
-if (file.exists(file.path(data_dir, "DPQ_H.xpt"))) {
-  dpq <- read_xpt(file.path(data_dir, "DPQ_H.xpt"))
+if (file.exists(xpt("DPQ"))) {
+  dpq <- read_xpt(xpt("DPQ"))
   items <- paste0("DPQ0", c("10","20","30","40","50","60","70","80","90"))
   dd <- dpq %>% select(SEQN, any_of(items))
   dd[items] <- lapply(dd[items], function(x) ifelse(x %in% c(7, 9), NA, x))
@@ -221,8 +216,8 @@ if (file.exists(file.path(data_dir, "DPQ_H.xpt"))) {
                    ifelse(partial + 3 * n_miss < 10, 0L, NA_integer_))
   como <- left_join(como, dd %>% select(SEQN, depression), by = "SEQN")
 }
-if (file.exists(file.path(data_dir, "HSQ_H.xpt"))) {
-  como <- left_join(como, read_xpt(file.path(data_dir, "HSQ_H.xpt")) %>%
+if (file.exists(xpt("HSQ"))) {
+  como <- left_join(como, read_xpt(xpt("HSQ")) %>%
     transmute(SEQN, srh_fairpoor = ifelse(HSD010 %in% c(4,5), 1L,
                                    ifelse(HSD010 %in% c(1,2,3), 0L, NA_integer_))), by = "SEQN")
 }

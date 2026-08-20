@@ -1,0 +1,21 @@
+"drug","boustani_score","is_combination","n_users","pct_of_sample"
+"metoprolol",1,FALSE,231,13.7
+"furosemide",1,FALSE,120,7.1
+"atenolol",1,FALSE,97,5.7
+"warfarin",1,FALSE,78,4.6
+"ranitidine",1,FALSE,51,3
+"alprazolam",1,FALSE,37,2.2
+"digoxin",1,FALSE,34,2
+"nifedipine",1,FALSE,32,1.9
+"prednisone",1,FALSE,32,1.9
+"hydralazine",1,FALSE,29,1.7
+"hydrochlorothiazide; triamterene",1,TRUE,29,1.7
+"cyclobenzaprine",2,FALSE,26,1.5
+"paroxetine",3,FALSE,23,1.4
+"trazodone",1,FALSE,23,1.4
+"bupropion",1,FALSE,20,1.2
+"amitriptyline",3,FALSE,19,1.1
+"meclizine",3,FALSE,16,0.9
+"oxybutynin",3,FALSE,15,0.9
+"venlafaxine",1,FALSE,14,0.8
+"isosorbide",1,FALSE,12,0.7

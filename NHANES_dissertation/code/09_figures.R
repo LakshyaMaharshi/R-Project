@@ -11,15 +11,12 @@ library(ggplot2)
 library(dplyr)
 library(scales)
 
-args_full <- commandArgs(trailingOnly = FALSE)
-file_arg  <- grep("^--file=", args_full, value = TRUE)
-script_dir <- if (length(file_arg) > 0) {
-  dirname(normalizePath(sub("^--file=", "", file_arg[1]), winslash = "/", mustWork = FALSE))
-} else normalizePath(getwd(), winslash = "/", mustWork = FALSE)
-base_dir <- file.path(script_dir, "..")
-in_dir   <- file.path(base_dir, "outputs", "v2")
-fig_dir  <- file.path(base_dir, "outputs", "figures")
-dir.create(fig_dir, showWarnings = FALSE, recursive = TRUE)
+# Paths and which NHANES cycle to run both come from config.R - see there. Pass
+# --cycle=2011-2012 to run the validation cycle; no argument means the dissertation cycle.
+.f <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
+source(file.path(if (length(.f)) dirname(sub("^--file=", "", .f[1])) else ".", "config.R"))
+
+in_dir <- out_dir   # figures read the tables this cycle just wrote
 
 need <- function(f) {
   p <- file.path(in_dir, f)

@@ -1,5 +1,5 @@
 """Extract the IACB (International Anticholinergic Burden) drug scores from the
-supervisor-supplied paper into data/iacb_scores.csv.
+supervisor-supplied paper into data/scales/iacb_scores.csv.
 
 Source: reference/ssrn-3777231 (1).pdf
         Fleetwood et al., "A novel machine learning approach to anticholinergic burden
@@ -29,7 +29,7 @@ import fitz  # pymupdf
 
 HERE = Path(__file__).resolve().parent
 PDF = HERE.parent / "reference" / "ssrn-3777231 (1).pdf"
-OUT = HERE.parent / "data" / "iacb_scores.csv"
+OUT = HERE.parent / "data" / "scales" / "iacb_scores.csv"
 
 PAGES = (21, 22)                                   # 0-based indices
 ANCHORS = [76.5, 172.5, 267.4, 368.3, 447.1]       # x of Score 0..4 columns

@@ -27,9 +27,12 @@ NHANES_dissertation/reference/new message*.pdf
 # This repository is public, so neither the IACB preprint (Fleetwood et al.,
 # SSRN 3777231) nor the UEA assessment brief is redistributed here. See
 # NHANES_dissertation/reference/README.md for where to obtain the preprint if
-# you want to re-run 08_extract_iacb.py; data/iacb_scores.csv is supplied.
+# you want to re-run 08_extract_iacb.py; data/scales/iacb_scores.csv is supplied.
 NHANES_dissertation/reference/ssrn-*.pdf
 NHANES_dissertation/reference/*Assessment*Brief*.docx
+
+# --- Exploratory scratch output (01/02 are console-only side quests) ---------
+NHANES_dissertation/outputs/*/exploratory_analysis_dataset.csv
 
 # --- Office / Word lock and autosave files -----------------------------------
 ~$*

@@ -1,0 +1,28 @@
+"drug","boustani_score","n_users","pct_of_sample"
+"paroxetine",3,23,1.4
+"amitriptyline",3,19,1.1
+"meclizine",3,16,0.9
+"oxybutynin",3,15,0.9
+"quetiapine",3,10,0.6
+"diphenhydramine",3,9,0.5
+"hydroxyzine",3,8,0.5
+"nortriptyline",3,8,0.5
+"tolterodine",3,7,0.4
+"solifenacin",3,6,0.4
+"imipramine",3,5,0.3
+"doxepin",3,4,0.2
+"hyoscyamine",3,3,0.2
+"darifenacin",3,2,0.1
+"hyoscyamine; methenam; m-blue; phenyl salicylate",3,2,0.1
+"olanzapine",3,2,0.1
+"orphenadrine",3,2,0.1
+"promethazine",3,2,0.1
+"trospium",3,2,0.1
+"amitriptyline; chlordiazepoxide",3,1,0.1
+"amitriptyline; perphenazine",6,1,0.1
+"atropine; diphenoxylate",3,1,0.1
+"brompheniramine; pseudoephedrine",3,1,0.1
+"codeine; promethazine",4,1,0.1
+"dextromethorphan; promethazine",3,1,0.1
+"fesoterodine",3,1,0.1
+"methocarbamol",3,1,0.1

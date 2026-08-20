@@ -15,18 +15,14 @@ library(dplyr)
 
 options(survey.lonely.psu = "adjust")
 
-args_full <- commandArgs(trailingOnly = FALSE)
-file_arg  <- grep("^--file=", args_full, value = TRUE)
-script_dir <- if (length(file_arg) > 0) {
-  dirname(normalizePath(sub("^--file=", "", file_arg[1]), winslash = "/", mustWork = FALSE))
-} else normalizePath(getwd(), winslash = "/", mustWork = FALSE)
-base_dir <- file.path(script_dir, "..")
-data_dir <- file.path(base_dir, "data")
-out_dir  <- file.path(base_dir, "outputs", "v2")
+# Paths and which NHANES cycle to run both come from config.R - see there. Pass
+# --cycle=2011-2012 to run the validation cycle; no argument means the dissertation cycle.
+.f <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
+source(file.path(if (length(.f)) dirname(sub("^--file=", "", .f[1])) else ".", "config.R"))
 
-demo <- read_xpt(file.path(data_dir, "DEMO_H.xpt"))
-rxq  <- read_xpt(file.path(data_dir, "RXQ_RX_H.xpt"))
-cfq  <- read_xpt(file.path(data_dir, "CFQ_H.xpt"))
+demo <- read_xpt(xpt("DEMO"))
+rxq  <- read_xpt(xpt("RXQ_RX"))
+cfq  <- read_xpt(xpt("CFQ"))
 # scoring comes from the corrected crosswalk (built by 11_corrected_crosswalk.R)
 cw <- read.csv(file.path(out_dir, "crosswalk_corrected.csv"), stringsAsFactors = FALSE)
 

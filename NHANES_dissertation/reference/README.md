@@ -12,7 +12,7 @@ re-run the extraction, download it from SSRN and save it in this folder as
 `ssrn-3777231 (1).pdf`.
 
 You do not need to. The extracted list is already supplied as
-`../data/iacb_scores.csv` (205 drugs), and every script in the pipeline reads
+`../data/scales/iacb_scores.csv` (205 drugs), and every script in the pipeline reads
 that file rather than the PDF. `08_extract_iacb.py` is included only so the
 extraction is auditable.
 

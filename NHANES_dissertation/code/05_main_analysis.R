@@ -1,5 +1,8 @@
-# NHANES 2013-2014 - ACB vs polypharmacy and cognition
+# NHANES - ACB vs polypharmacy and cognition
 # main analysis script (survey weighted) - Jignesh
+#
+# Runs on whichever cycle config.R selects. 2013-2014 is the dissertation cycle and the
+# default; --cycle=2011-2012 is the independent validation Dr Sami asked for (15/20 Aug).
 #
 # question Dr Sami wants answered: is anticholinergic burden (ACB) associated with
 # cognition independently of the number of meds someone is on? "ACB is bad for
@@ -25,33 +28,18 @@ library(tidyr)
 # this matters - without it the lonely PSU strata throw errors / NaN SEs
 options(survey.lonely.psu = "adjust")
 
-# figure out where the script lives so the relative paths work.
-# took a couple tries to get this right on windows vs source() vs jupyter.
-args_full <- commandArgs(trailingOnly = FALSE)
-file_arg  <- grep("^--file=", args_full, value = TRUE)
-if (length(file_arg) > 0) {
-  # run with Rscript - the folder comes from the --file path
-  script_dir <- dirname(normalizePath(sub("^--file=", "", file_arg[1]),
-                                      winslash = "/", mustWork = FALSE))
-} else {
-  # interactive / Jupyter (IRkernel): just use the working dir, so you MUST
-  # setwd() to the code/ folder before running this. see ../README.md.
-  script_dir <- normalizePath(getwd(), winslash = "/", mustWork = FALSE)
-}
-base_dir <- file.path(script_dir, "..")
+# Paths and which NHANES cycle to run both come from config.R - see there. It also
+# handles the Rscript-vs-interactive working directory dance this used to do inline.
+.f <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
+source(file.path(if (length(.f)) dirname(sub("^--file=", "", .f[1])) else ".", "config.R"))
 
-data_dir <- file.path(base_dir, "data")
-out_dir  <- file.path(base_dir, "outputs", "v2")
-dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
-
-cat("data dir:", normalizePath(data_dir, mustWork = FALSE), "\n")
-cat("out dir: ", normalizePath(out_dir,  mustWork = FALSE), "\n")
+cat("out dir: ", normalizePath(out_dir, mustWork = FALSE), "\n")
 
 
 ## 1. load the raw NHANES files ------------------------------------------------
-demo <- read_xpt(file.path(data_dir, "DEMO_H.xpt"))
-rxq  <- read_xpt(file.path(data_dir, "RXQ_RX_H.xpt"))
-cfq  <- read_xpt(file.path(data_dir, "CFQ_H.xpt"))
+demo <- read_xpt(xpt("DEMO"))
+rxq  <- read_xpt(xpt("RXQ_RX"))
+cfq  <- read_xpt(xpt("CFQ"))
 
 cat(sprintf("loaded: demo=%d rows, rxq=%d rows, cfq=%d rows\n",
             nrow(demo), nrow(rxq), nrow(cfq)))
@@ -98,17 +86,18 @@ exposure <- rx %>%
 # That way the script still runs end-to-end with just the 3 core files.
 #
 # files needed for the full set:
-#   MCQ_H.xpt  -> stroke (MCQ160F), heart disease (MCQ160B/C/D/E)
-#   DIQ_H.xpt  -> diabetes (DIQ010)
-#   DPQ_H.xpt  -> depression, PHQ-9 (DPQ010..DPQ090)
-#   HSQ_H.xpt  -> self-rated health (HSD010)
+#   MCQ  -> stroke (MCQ160F), heart disease (MCQ160B/C/D/E)
+#   DIQ  -> diabetes (DIQ010)
+#   DPQ  -> depression, PHQ-9 (DPQ010..DPQ090)
+#   HSQ  -> self-rated health (HSD010)
+# xpt() adds the cycle suffix: _H for 2013-2014, _G for 2011-2012.
 
 # helper - 1=yes 2=no, everything else (7 refused / 9 dont know / .) -> NA
 yn <- function(x) ifelse(x == 1, 1L, ifelse(x == 2, 0L, NA_integer_))
 
 como <- tibble(SEQN = demo$SEQN)  # start from everyone, fill what we can
 
-mcq_path <- file.path(data_dir, "MCQ_H.xpt")
+mcq_path <- xpt("MCQ")
 if (file.exists(mcq_path)) {
   mcq <- read_xpt(mcq_path)
   mcq2 <- mcq %>% transmute(
@@ -118,24 +107,24 @@ if (file.exists(mcq_path)) {
     cvd = pmax(yn(MCQ160B), yn(MCQ160C), yn(MCQ160D), yn(MCQ160E), na.rm = TRUE)
   )
   como <- left_join(como, mcq2, by = "SEQN")
-  cat("MCQ_H loaded - got stroke + CVD\n")
+  cat("MCQ loaded - got stroke + CVD\n")
 } else {
   como$stroke <- NA_integer_; como$cvd <- NA_integer_
-  cat("[skip] MCQ_H.xpt not found - stroke/CVD will be NA\n")
+  cat("[skip] MCQ file not found - stroke/CVD will be NA\n")
 }
 
-diq_path <- file.path(data_dir, "DIQ_H.xpt")
+diq_path <- xpt("DIQ")
 if (file.exists(diq_path)) {
   diq <- read_xpt(diq_path)
   # DIQ010: 1 yes, 2 no, 3 borderline, 7/9 missing. counting borderline as no.
   como <- left_join(como, diq %>% transmute(SEQN, diabetes = yn(DIQ010)), by = "SEQN")
-  cat("DIQ_H loaded - got diabetes\n")
+  cat("DIQ loaded - got diabetes\n")
 } else {
   como$diabetes <- NA_integer_
-  cat("[skip] DIQ_H.xpt not found - diabetes will be NA\n")
+  cat("[skip] DIQ file not found - diabetes will be NA\n")
 }
 
-dpq_path <- file.path(data_dir, "DPQ_H.xpt")
+dpq_path <- xpt("DPQ")
 if (file.exists(dpq_path)) {
   dpq <- read_xpt(dpq_path)
   # DPQ010..DPQ090 are the nine scored items, each 0-3. DPQ100 asks how difficult the
@@ -164,16 +153,16 @@ if (file.exists(dpq_path)) {
   d$depression <- ifelse(d$partial >= 10, 1L,
                   ifelse(d$partial + 3 * d$n_miss < 10, 0L, NA_integer_))
   como <- left_join(como, d %>% select(SEQN, depression), by = "SEQN")
-  cat(sprintf(paste0("DPQ_H loaded - PHQ-9 depression: %d yes / %d no / %d undetermined ",
+  cat(sprintf(paste0("DPQ loaded - PHQ-9 depression: %d yes / %d no / %d undetermined ",
                      "(%d had an incomplete PHQ-9)\n"),
               sum(d$depression == 1, na.rm = TRUE), sum(d$depression == 0, na.rm = TRUE),
               sum(is.na(d$depression)), sum(d$n_ans < length(phq_items))))
 } else {
   como$depression <- NA_integer_
-  cat("[skip] DPQ_H.xpt not found - depression will be NA\n")
+  cat("[skip] DPQ file not found - depression will be NA\n")
 }
 
-hsq_path <- file.path(data_dir, "HSQ_H.xpt")
+hsq_path <- xpt("HSQ")
 if (file.exists(hsq_path)) {
   hsq <- read_xpt(hsq_path)
   # HSD010: 1 excellent ... 5 poor, 7/9 missing. collapse to fair/poor vs better.
@@ -183,10 +172,10 @@ if (file.exists(hsq_path)) {
                    ifelse(HSD010 %in% c(1, 2, 3), 0L, NA_integer_))
   )
   como <- left_join(como, hsq2, by = "SEQN")
-  cat("HSQ_H loaded - got self-rated health\n")
+  cat("HSQ loaded - got self-rated health\n")
 } else {
   como$srh_fairpoor <- NA_integer_
-  cat("[skip] HSQ_H.xpt not found - self-rated health will be NA\n")
+  cat("[skip] HSQ file not found - self-rated health will be NA\n")
 }
 
 # which health vars actually have data? used later to build the model formula.
@@ -237,7 +226,11 @@ analysis <- analysis %>%
     age60       = age >= 60,
     in_cfq      = SEQN %in% cfq$SEQN,
     has_dsst    = !is.na(CFDDS),
-    has_fluency = !is.na(CFDAST)
+    has_fluency = !is.na(CFDAST),
+    # CERAD delayed recall. It was already being read in and saved, but never modelled.
+    # Dr Sami wants it as a third outcome for the cross-cohort comparison, so it is a
+    # first-class outcome now rather than a column along for the ride.
+    has_recall  = !is.na(CFDCSR)
   )
 
 # quick sanity check on the exposure categories before going further
@@ -250,17 +243,22 @@ analysis$analytic <- analysis$age60
 
 
 ## sample flow / exclusion accounting ------------------------------------------
+# NB the recall row is APPENDED, not inserted. Figure 1 in 09_figures.R indexes this
+# table positionally (n[1]..n[5]), so a new row in the middle would silently redraw the
+# whole flow chart with the wrong numbers. Anything new goes on the end.
 flow <- tibble(
-  step = c("Full NHANES 2013-2014 (DEMO_H)",
+  step = c(sprintf("Full %s (DEMO)", CYCLE_LABEL),
            "Aged 60+",
-           "  ...given cognitive module (in CFQ_H)",
+           "  ...given cognitive module (in CFQ)",
            "  ...with valid DSST (CFDDS)",
-           "  ...with valid animal fluency (CFDAST)"),
+           "  ...with valid animal fluency (CFDAST)",
+           "  ...with valid CERAD delayed recall (CFDCSR)"),
   n = c(nrow(analysis),
         sum(analysis$age60),
         sum(analysis$age60 & analysis$in_cfq),
         sum(analysis$age60 & analysis$has_dsst),
-        sum(analysis$age60 & analysis$has_fluency))
+        sum(analysis$age60 & analysis$has_fluency),
+        sum(analysis$age60 & analysis$has_recall))
 )
 write.csv(flow, file.path(out_dir, "table_sample_flow.csv"), row.names = FALSE)
 cat("\n=== SAMPLE FLOW ===\n"); print(flow)
@@ -454,12 +452,18 @@ run_outcome <- function(outcome) {
 
 dsst_results    <- run_outcome("CFDDS")   # PRIMARY
 fluency_results <- run_outcome("CFDAST")  # SECONDARY
+# CERAD delayed recall - third outcome, added for the cross-cohort work. It gets its own
+# file rather than being appended to an existing one, so none of the numbers already
+# quoted in the dissertation can move underneath me.
+recall_results  <- run_outcome("CFDCSR")  # SECONDARY
 
 write.csv(dsst_results,    file.path(out_dir, "models_dsst_primary.csv"),      row.names = FALSE)
 write.csv(fluency_results, file.path(out_dir, "models_fluency_secondary.csv"), row.names = FALSE)
+write.csv(recall_results,  file.path(out_dir, "models_recall_secondary.csv"),  row.names = FALSE)
 
 cat("\n=== PRIMARY OUTCOME: DSST (survey-weighted) ===\n");        print(dsst_results)
 cat("\n=== SECONDARY OUTCOME: animal fluency (survey-weighted) ===\n"); print(fluency_results)
+cat("\n=== SECONDARY OUTCOME: CERAD delayed recall (survey-weighted) ===\n"); print(recall_results)
 # main finding to look at: the acb_burden coefficient in M4 should still be
 # negative and significant with n_drugs in the model. that's the whole point.
 
@@ -530,7 +534,7 @@ if ("stroke" %in% health_available) {
   write.csv(sens, file.path(out_dir, "models_dsst_exclude_stroke.csv"), row.names = FALSE)
   print(sens)
 } else {
-  cat("\n[skip] no stroke variable (MCQ_H.xpt not loaded) - ",
+  cat("\n[skip] no stroke variable (MCQ file not loaded) - ",
       "download it to run the stroke-exclusion sensitivity.\n", sep = "")
 }
 

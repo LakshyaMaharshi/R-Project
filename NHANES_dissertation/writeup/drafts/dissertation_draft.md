@@ -140,7 +140,7 @@ Analyses used R 4.6.1 (R Core Team, 2026) with the survey package for all weight
 
 Of the 10,175 participants in the 2013–2014 cycle, 1,841 were aged 60 or over, of whom 1,785 were given the cognitive module. Valid scores were available for 1,592 on the DSST and 1,661 on animal fluency; the primary analysis sample was therefore 1,592. Figure 1 sets out the participant flow.
 
-![Participant flow](../../outputs/figures/fig1_sample_flow.png)
+![Participant flow](../../outputs/2013-2014/figures/fig1_sample_flow.png)
 
 *Figure 1. Participant flow from the full NHANES 2013–2014 cycle to the analytic samples.*
 
@@ -171,7 +171,7 @@ A clear gradient across ACB categories was already visible in the unadjusted dat
 
 *Table 2. Sample characteristics by anticholinergic burden category (survey-weighted).*
 
-![DSST by anticholinergic burden category](../../outputs/figures/fig2_dose_response.png)
+![DSST by anticholinergic burden category](../../outputs/2013-2014/figures/fig2_dose_response.png)
 
 *Figure 2. Weighted mean DSST score by anticholinergic burden category, unadjusted. Intervals are survey-weighted and use the same 15 design degrees of freedom as the regression models in Sections 3.4 to 3.7, rather than a normal approximation, so the figure and the models are on the same footing.*
 
@@ -294,11 +294,11 @@ Among the 91 single-ingredient names scored by both lists, the scales assigned e
 
 *Table 7. DSST models under both anticholinergic scales, same participants and same specification, with unlisted drugs contributing nothing to either burden. Coefficients are points of DSST score per unit of the stated exposure and are not comparable in magnitude between scales, because IACB scores each drug 0 to 4 and Boustani 0 to 3; Table 8 puts them on a common footing. The categorical specification was fitted for Boustani only, for the reason given in Section 2.5.*
 
-![Forest plot of DSST models under both scales](../../outputs/figures/fig3_forest_both_scales.png)
+![Forest plot of DSST models under both scales](../../outputs/2013-2014/figures/fig3_forest_both_scales.png)
 
 *Figure 3. DSST associations under both anticholinergic scales, same participants and same model specifications. Points are coefficients with 95% confidence intervals; estimates crossing zero are shown in red. Because IACB scores each drug 0 to 4 and Boustani 0 to 3, the panels should be read for direction, significance and whether the interval crosses zero, not for the relative size of coefficients; Figure 5 makes the direct size comparison on standardised burdens.*
 
-![Drug-level agreement between the two scales](../../outputs/figures/fig4_scale_agreement.png)
+![Drug-level agreement between the two scales](../../outputs/2013-2014/figures/fig4_scale_agreement.png)
 
 *Figure 4. Cross-tabulation of Boustani and IACB scores for the 91 single-ingredient drugs scored by both scales. Cells give the number of drugs. Exact agreement is the diagonal; the 17 drugs at Boustani 3 and IACB 4 are at the top of both scales despite the differing numeric labels.*
 
@@ -323,7 +323,7 @@ Splitting the same standardised model by how many medicines a participant takes 
 
 *Table 9. The standardised fully adjusted model of Table 8, refitted within medication-count strata. ΔAIC is against the same base model fitted in that stratum. The highest band holds 103 participants and its interval is correspondingly wide, so it is read as indicative.*
 
-![Standardised burden by medication band](../../outputs/figures/fig5_medband_standardised.png)
+![Standardised burden by medication band](../../outputs/2013-2014/figures/fig5_medband_standardised.png)
 
 *Figure 5. Change in DSST per one standard deviation of anticholinergic burden, by medication count, under each scale. Both burdens are standardised, so unlike Figure 3 the two scales can be compared directly here. Estimates whose interval crosses zero are shown in red.*
 

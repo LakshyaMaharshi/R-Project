@@ -1,17 +1,28 @@
 import pandas as pd
 import pyreadstat
 import os
+import sys
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-data_dir = os.path.join(script_dir, '../data/')
+# Which cycle to explore. Matches config.R / 00_download_data.py:
+#   python 02_acb_mapping.py                 -> 2013-2014
+#   python 02_acb_mapping.py 2011-2012       -> the validation cycle
+CYCLES = {"2013-2014": "_H", "2011-2012": "_G"}
+cycle = sys.argv[1] if len(sys.argv) > 1 else "2013-2014"
+if cycle not in CYCLES:
+    sys.exit(f"unknown cycle {cycle!r} - known: {', '.join(CYCLES)}")
+sfx = CYCLES[cycle]
+data_dir = os.path.join(script_dir, '..', 'data', cycle)
+scales_dir = os.path.join(script_dir, '..', 'data', 'scales')
+print(f"cycle {cycle} (suffix {sfx})")
 
-demo, _ = pyreadstat.read_xport(os.path.join(data_dir, 'DEMO_H.xpt'), encoding='latin1')
-rxq,  _ = pyreadstat.read_xport(os.path.join(data_dir, 'RXQ_RX_H.xpt'), encoding='latin1')
-cfq,  _ = pyreadstat.read_xport(os.path.join(data_dir, 'CFQ_H.xpt'), encoding='latin1')
+demo, _ = pyreadstat.read_xport(os.path.join(data_dir, f'DEMO{sfx}.xpt'), encoding='latin1')
+rxq,  _ = pyreadstat.read_xport(os.path.join(data_dir, f'RXQ_RX{sfx}.xpt'), encoding='latin1')
+cfq,  _ = pyreadstat.read_xport(os.path.join(data_dir, f'CFQ{sfx}.xpt'), encoding='latin1')
 
 # anticholinergic burden scale - using Boustani (2008)
 # aas_combined.csv has drug names + scores from the literature
-acb = pd.read_csv(os.path.join(data_dir, 'aas_combined.csv'))
+acb = pd.read_csv(os.path.join(scales_dir, 'aas_combined.csv'))
 print(f"ACB reference list: {len(acb)} drugs")
 print(acb.head())  # check it loaded right
 
@@ -65,7 +76,9 @@ print(f"Mean DSST score: {merged['CFDDS'].mean():.1f}")
 # TODO: maybe add categorical burden variable here (none/low/high) before saving
 # would make the regression tables cleaner
 
-out_dir = os.path.join(script_dir, '../outputs/')
+# exploratory scratch output - not used by the pipeline, and gitignored.
+# The real results are written per cycle by the R scripts.
+out_dir = os.path.join(script_dir, '..', 'outputs', cycle)
 os.makedirs(out_dir, exist_ok=True)
-merged.to_csv(os.path.join(out_dir, 'analysis_dataset.csv'), index=False)
-print("Saved: outputs/analysis_dataset.csv")
+merged.to_csv(os.path.join(out_dir, 'exploratory_analysis_dataset.csv'), index=False)
+print(f"Saved: outputs/{cycle}/exploratory_analysis_dataset.csv")
