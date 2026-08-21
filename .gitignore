@@ -34,6 +34,10 @@ NHANES_dissertation/reference/*Assessment*Brief*.docx
 # --- Exploratory scratch output (01/02 are console-only side quests) ---------
 NHANES_dissertation/outputs/*/exploratory_analysis_dataset.csv
 
+# --- Zipped bundles made for emailing (the contents are already tracked) -----
+NHANES_dissertation/outputs/*.zip
+*.zip
+
 # --- Office / Word lock and autosave files -----------------------------------
 ~$*
 *.asd
