@@ -70,10 +70,24 @@ error**, so prefer `run_all.R`. If you do run them by hand:
 | **3** | `07_worked_examples.R` | the crosswalk | top anticholinergic drugs, age-equivalence figures |
 | **4** | `10_appendix_tables.R` | the crosswalk | full covariate coefficients for Appendix C |
 | **5** | `09_figures.R` | the CSVs from 1–2 | the five figures |
-| **6** | `12_cohort_comparison.R` | **both** cycles complete | the cross-cohort tables and Figure 6 |
+| **6** | `13_export_participant_level.R` | the crosswalk + step 2 | participant-level M4 export (SEQN, medicines, band, both burdens, DSST) |
+| **7** | `12_cohort_comparison.R` | **both** cycles complete | the cross-cohort tables and Figure 6 |
+| **8** | `14_pooled_cycle_interaction.R` | **both** cycles complete | pooled model with a cycle x burden interaction |
+| **9** | `15_presentation_figures.R` | steps 7-8 | slide-ready figures in `outputs/comparison/presentation/` |
 
 Add `--cycle=2011-2012` to any of them to run the validation cycle. Steps 1–5 generate
 every number in the dissertation.
+
+`audit_2011_2012.R` is a standalone reading copy of the whole 2011-2012 analysis in one
+file, written for the supervisor. It is not part of the pipeline and reruns nothing that
+matters: its last section re-reads the production output and stops if any focal estimate
+has drifted by more than 1e-8.
+
+**Is the difference between the cycles real?** `14_pooled_cycle_interaction.R` answers
+that directly, by pooling both cycles and testing a cycle x burden interaction rather than
+comparing a significant result in one cycle with a non-significant one in the other. It
+halves the survey weights (the NHANES rule for combining two 2-year cycles) and checks that
+no design stratum is shared between cycles before pooling.
 
 Not part of the run: `00_download_data.py` (re-fetches raw data), `01_data_exploration.py`
 and `02_acb_mapping.py` (exploratory, console output only), and `08_extract_iacb.py`,
@@ -93,7 +107,8 @@ appears in the dissertation** — see [`code/archive/README.md`](code/archive/RE
 code/
   config.R              which cycle to run + every path. The only cycle-aware file.
   run_all.R             runs the whole pipeline in the correct order
-  00-12_*.R / *.py      the pipeline; numbering skips 03/04/06 (see archive/)
+  00-15_*.R / *.py      the pipeline; numbering skips 03/04/06 (see archive/)
+  audit_2011_2012.R     the 2011-2012 analysis in one readable file, self-checking
   archive/              superseded scripts, kept for provenance
 data/
   2013-2014/            NHANES .xpt files for the dissertation cycle
@@ -104,7 +119,8 @@ outputs/
     tables/             every result CSV + sessionInfo.txt
     figures/            the five figures used in the dissertation
   2011-2012/            same structure, validation cycle
-  comparison/           cross-cohort tables + Figure 6
+  comparison/           cross-cohort tables, the pooled interaction test, Figure 6
+    presentation/       slide-ready figures for the September presentation
 reference/              where to obtain the IACB preprint that 08 reads
 writeup/                the dissertation .docx, plus its markdown source and build script
 ```
@@ -155,6 +171,9 @@ Three analysis choices worth knowing when reading the code:
   categorical covariates drives the residual df toward zero and `confint()` returns
   unusable intervals. The design df is written to `design_df.csv` so the figures use the
   same multiplier as the models rather than a hardcoded 1.96.
+- `DIQ010 == 3` ("borderline" diabetes) is coded as **no diagnosed diabetes**, not as
+  missing. It is a real answer rather than a non-response, and treating it as missing
+  dropped 97 participants (2013-2014) and 62 (2011-2012) out of every comorbidity model.
 - The PHQ-9 depression covariate is scored by **deterministic bounding**, not
   `rowSums(na.rm = TRUE)`. The latter scores an unanswered item as "not at all", which
   turns a non-response into a fabricated negative. See the comment in `05_main_analysis.R`.

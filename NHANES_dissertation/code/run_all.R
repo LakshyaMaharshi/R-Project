@@ -14,11 +14,17 @@
 # would let objects leak between scripts, and a stale variable surviving into the next
 # script is the sort of thing that produces confident, wrong numbers.
 
-STEPS <- c("11_corrected_crosswalk.R",   # 1. the drug-to-scale crosswalk + scale comparison
-           "05_main_analysis.R",         # 2. primary/secondary models, Table 1, IPW
-           "07_worked_examples.R",       # 3. drug-mix facts quoted in the text
-           "10_appendix_tables.R",       # 4. full covariate tables for the appendix
-           "09_figures.R")               # 5. the five figures
+STEPS <- c("11_corrected_crosswalk.R",       # 1. the drug-to-scale crosswalk + scale comparison
+           "05_main_analysis.R",             # 2. primary/secondary models, Table 1, IPW
+           "07_worked_examples.R",           # 3. drug-mix facts quoted in the text
+           "10_appendix_tables.R",           # 4. full covariate tables for the appendix
+           "09_figures.R",                   # 5. the five figures
+           "13_export_participant_level.R")  # 6. participant-level M4 export (Dr Sami, 21 Aug)
+
+# These need BOTH cycles finished, so they run once at the end rather than per cycle.
+POOLED <- c("12_cohort_comparison.R",        # the two cycles side by side
+            "14_pooled_cycle_interaction.R", # cycle x burden interaction - the key test
+            "15_presentation_figures.R")     # slide-ready plots
 
 .f <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
 here <- if (length(.f)) dirname(sub("^--file=", "", .f[1])) else "."
@@ -49,8 +55,13 @@ for (cyc in cycles) {
   for (s in STEPS) run(s, paste0("--cycle=", cyc))
 }
 
-# The comparison only means anything with both cycles present.
-if (length(cycles) > 1) run("12_cohort_comparison.R")
+# The pooled steps only mean anything with both cycles present.
+if (length(cycles) > 1) {
+  for (s in POOLED) run(s)
+} else {
+  cat("\n[skip] the pooled comparison, interaction test and presentation figures
+      need both cycles. Run `Rscript run_all.R` with no argument to get them.\n")
+}
 
 cat("\nAll done. Results are in outputs/<cycle>/",
     if (length(cycles) > 1) " and outputs/comparison/" else "", "\n", sep = "")
