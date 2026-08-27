@@ -18,7 +18,7 @@ Module: BIO-7057X Dissertation
 Supervisor: Dr Saber Sami
 Module Organiser: Karl Grieshop
 Submission: [date] (deadline 7 August 2026)
-Word count (main text): 7,995
+Word count (main text): 7,999
 
 (Includes in-text citations. Excludes the title page, table contents, table titles, figure legends, the reference list and the appendix, as specified in the assessment brief. Word's whole-document count, which includes all of those, is 10,243.)
 
@@ -100,7 +100,7 @@ Drug names were linked to the scales through an explicit crosswalk that classifi
 
 Two scoring rules govern what happens next, both set by the supervisor after earlier drafts were found to mishandle them. First, a combination product keeps the score of every component the list recognises, and a component it does not recognise contributes zero rather than voiding the whole product. Setting the entire product to missing, as an intermediate version did, discarded real exposure: it lost oxycodone's score from "acetaminophen; oxycodone", and across the sample removed 223 Boustani and 175 IACB prescriptions from the burden totals, affecting 13.7% and 10.9% of participants with a prescription record. Second, where the drug's identity is clear, absence from a scale's final list means no recognised anticholinergic activity, so it contributes zero, which is the scales' own convention. Burden is therefore never missing; the crosswalk records how each name resolved instead, so coverage can be reported in its own right and the comparison in Section 2.5 restricted to the drugs both lists recognise. Identifier-based matching (RXCUI) was not attempted and is noted as a limitation.
 
-Because published scales disagree about which drugs are anticholinergic and how strongly, the analysis was repeated with exposure rescored on a second, independently developed scale: the International Anticholinergic Burden scale (IACB) of Fleetwood et al. (2021). IACB was derived by a machine-learning classifier trained on textual descriptions of medicines from DrugBank, PubChem and Wikipedia rather than by expert consensus, and scores each drug 0 to 4. Given that wider range, its totals are not numerically comparable with Boustani's, which is why Section 2.5 standardises both before comparing them. Scores came from the drug list published with that paper, which is a preprint, has not been peer reviewed, and is co-authored by the supervisor of this dissertation; typographic ligatures in the PDF were normalised during extraction so that names such as fluoxetine could match.
+Because published scales disagree about which drugs are anticholinergic and how strongly, the analysis was repeated with exposure rescored on a second, independently developed scale: the International Anticholinergic Burden scale (IACB), Fleetwood et al. (2021). IACB was derived by a machine-learning classifier trained on textual descriptions of medicines from DrugBank, PubChem and Wikipedia rather than by expert consensus, and scores each drug 0 to 4. Given that wider range, its totals are not numerically comparable with Boustani's, which is why Section 2.5 standardises both before comparing them. Scores came from the drug list published with that paper, which is a preprint, has not been peer reviewed, and is co-authored by the supervisor of this dissertation; typographic ligatures in the PDF were normalised during extraction so that names such as fluoxetine could match.
 
 Prescription-level scores were combined into four person-level measures: anticholinergic burden, the sum of Boustani scores and the primary exposure; the number of prescriptions, the measure of polypharmacy; the number of anticholinergic drugs, those scoring above zero; and the number of high-potency anticholinergics, those scoring 3. Participants with no prescription record were treated as taking no drugs and carrying no burden rather than as missing. Burden was also grouped into three categories for a secondary specification: none (0), low to moderate (1–2) and high (3 or more), the last being the level Boustani associates with clinically important exposure.
 
@@ -108,11 +108,11 @@ A worked example shows why the distinction matters. A participant taking lisinop
 
 ## 2.3 Outcomes
 
-The primary outcome was the Digit Symbol Substitution Test (CFDDS), in which participants pair symbols with numbers against the clock; the score is the number completed correctly, so higher values indicate faster processing. It was chosen because anticholinergic drugs act mainly on attention and processing speed, the abilities the test captures (Jaeger, 2018). The secondary outcome was animal (category) fluency (CFDAST), the number of animals named in one minute. A delayed word-recall score was available in the same file but was not analysed.
+The primary outcome was the Digit Symbol Substitution Test (CFDDS), in which participants pair symbols with numbers against the clock; the score is the number completed correctly, so higher values indicate faster processing. It was chosen because anticholinergic drugs act mainly on attention and processing speed, which is what it captures (Jaeger, 2018). The secondary outcome was animal (category) fluency (CFDAST), the number of animals named in one minute. CERAD delayed word recall (CFDCSR) is modelled in the accompanying code as a third domain but is not reported here.
 
 ## 2.4 Covariates
 
-The models adjusted for age in years (RIDAGEYR), sex (RIAGENDR), race and ethnicity (RIDRETH3, with non-Hispanic White as the reference), educational attainment (DMDEDUC2, in five categories) and the family income-to-poverty ratio (INDFMPIR, capped at 5 by NHANES). Refusals and "don't know" responses were set to missing. Comorbidity covariates were pre-specified with the supervisor and drawn from additional NHANES files: stroke and cardiovascular disease (MCQ_H), diabetes (DIQ_H), depression measured by the PHQ-9 (DPQ_H), and self-rated health (HSQ_H). These entered a further adjusted model (Section 2.5) and a stroke-exclusion sensitivity analysis.
+The models adjusted for age in years (RIDAGEYR), sex (RIAGENDR), race and ethnicity (RIDRETH3, with non-Hispanic White as the reference), educational attainment (DMDEDUC2, in five categories) and the family income-to-poverty ratio (INDFMPIR, capped at 5 by NHANES). Refusals and "don't know" responses were set to missing. Comorbidity covariates were pre-specified with the supervisor and drawn from additional NHANES files: stroke and cardiovascular disease (MCQ_H), diabetes (DIQ_H, with "borderline" counted as no diagnosed diabetes), depression measured by the PHQ-9 (DPQ_H), and self-rated health (HSQ_H). These entered a further adjusted model (Section 2.5) and a stroke-exclusion sensitivity analysis.
 
 Depression used the standard PHQ-9 cut-point of 10 or more across the nine scored items, excluding the severity-of-difficulty item, which does not contribute to the score. Summing over whatever items a participant happened to answer would treat an unanswered item as a reply of "not at all", and 527 people in the file answered none of the nine. Because the items only add, two cases are still settled by arithmetic and were treated so: a partial score already at 10 or above is over the cut-point whatever is missing, and one that cannot reach 10 even if every missing item scored the maximum is below it. Anything else was left missing, dropping the participant from the comorbidity-adjusted models rather than assigning an answer they did not give.
 
@@ -128,7 +128,7 @@ Five further analyses tested robustness. First, participants with and without a 
 
 Comparing the scales on raw coefficients would be misleading, since one runs to 3 and the other to 4. Each burden was therefore divided by its own standard deviation within the analysis sample, 1.45 for Boustani and 2.28 for IACB, so both coefficients express the change in DSST per one standard deviation of burden. Each was then added to a base model holding medication count and the demographic and socioeconomic covariates, and the change in fit assessed by the change in AIC and a design-based Wald test of the added term. The same model was refitted within three medication-count strata (0–4, 5–9, and 10 or more), on the reasoning that a weighted burden score and a plain count are unlikely to carry the same information at every level of prescribing complexity; the smallest stratum holds 103 participants, so those estimates are treated as indicative.
 
-One further precaution was needed for the comorbidity model. M4 and M4+ do not share the same complete cases, so any difference between them could be the 118 participants dropped for missing comorbidity data rather than the comorbidities. M4 was therefore refitted on exactly the participants M4+ uses, leaving the covariate set as the only difference between the two.
+One further precaution was needed for the comorbidity model. M4 and M4+ do not share the same complete cases, so any difference between them could be the 37 participants dropped for missing comorbidity data rather than the comorbidities. M4 was therefore refitted on exactly the participants M4+ uses, leaving the covariate set as the only difference between the two.
 
 Analyses used R 4.6.1 (R Core Team, 2026) with the survey package for all weighted estimation (Lumley, 2004), plus haven, dplyr and tidyr. Because the design is cross-sectional and observational, results are reported as associations; the analysis does not support causal or temporal claims.
 
@@ -220,8 +220,8 @@ The key comparison is M3, where burden and count are entered together. Both rema
 | M3: ACB + count | Medicines | −0.96 | −1.27, −0.65 | <0.001 | 1,592 |
 | M4: fully adjusted | ACB burden | −1.37 | −1.92, −0.81 | <0.001 | 1,468 |
 | M4: fully adjusted | Medicines | −0.55 | −0.81, −0.29 | <0.001 | 1,468 |
-| M4+: + comorbidities | ACB burden | −1.36 | −1.91, −0.81 | <0.001 | 1,350 |
-| M4+: + comorbidities | Medicines | −0.32 | −0.66, 0.03 | 0.072 | 1,350 |
+| M4+: + comorbidities | ACB burden | −1.34 | −1.87, −0.81 | <0.001 | 1,431 |
+| M4+: + comorbidities | Medicines | −0.33 | −0.65, −0.01 | 0.046 | 1,431 |
 | M5a: ACB category (ref. ACB 0) | ACB 1–2 | −2.67 | −5.14, −0.20 | 0.036 | 1,468 |
 | M5a: ACB category (ref. ACB 0) | ACB 3+ | −5.62 | −7.90, −3.34 | <0.001 | 1,468 |
 | M5b: high-potency count | High-potency drugs | −2.54 | −4.48, −0.61 | 0.013 | 1,468 |
@@ -232,20 +232,20 @@ The key comparison is M3, where burden and count are entered together. Both rema
 
 These associations are easier to judge against age, estimated in the same model at 0.87 DSST points per year. One unit of burden is therefore equivalent to roughly 1.6 years of ageing, and the 5.62-point deficit at ACB 3+ to about 6.4 years: a 70-year-old with high burden scored like an unexposed person in their mid-seventies. That is substantial for an exposure that is in principle modifiable, though the design describes a difference between people rather than a change within them.
 
-Adding the pre-specified comorbidities (stroke, cardiovascular disease, diabetes, depression and self-rated health) to the fully adjusted model (M4+) left burden essentially unchanged at −1.36 (p<0.001) while attenuating medication count from −0.55 to −0.32, past the conventional significance threshold (p=0.072). That contrast only means something if the two models describe the same people, and as fitted they do not: M4 runs on 1,468 participants and M4+ on the 1,350 with complete comorbidity data, so the difference could have been the 118 who dropped out. Table 5 therefore refits both on the identical 1,350, with the burdens standardised so the two scales can be read side by side.
+Adding the pre-specified comorbidities (stroke, cardiovascular disease, diabetes, depression and self-rated health) to the fully adjusted model (M4+) left burden essentially unchanged at −1.34 (p<0.001) while attenuating medication count from −0.55 to −0.33 (p=0.046), which leaves it significant but materially weaker. That contrast only means something if the two models describe the same people, and as fitted they do not: M4 runs on 1,468 participants and M4+ on the 1,431 with complete comorbidity data, so the difference could have been the 37 who dropped out. Table 5 therefore refits both on the identical 1,431, with the burdens standardised so the two scales can be read side by side.
 
 | Scale | Model | Burden per 1 SD (95% CI) | p | Medicines | p | AIC |
 | --- | --- | --- | --- | --- | --- | --- |
-| Boustani ACB | M4, same participants | −1.90 (−2.73, −1.07) | <0.001 | −0.54 | 0.001 | 10,600.2 |
-| Boustani ACB | M4+, with comorbidities | −1.97 (−2.77, −1.17) | <0.001 | −0.32 | 0.072 | 10,576.9 |
-| IACB | M4, same participants | −1.15 (−1.96, −0.34) | 0.009 | −0.61 | <0.001 | 10,612.7 |
-| IACB | M4+, with comorbidities | −1.15 (−2.02, −0.28) | 0.013 | −0.40 | 0.041 | 10,592.3 |
+| Boustani ACB | M4, same participants | −1.86 (−2.65, −1.07) | <0.001 | −0.54 | 0.001 | 11,204.4 |
+| Boustani ACB | M4+, with comorbidities | −1.92 (−2.68, −1.16) | <0.001 | −0.33 | 0.046 | 11,178.6 |
+| IACB | M4, same participants | −1.26 (−2.09, −0.42) | 0.006 | −0.59 | 0.001 | 11,216.0 |
+| IACB | M4+, with comorbidities | −1.25 (−2.14, −0.36) | 0.009 | −0.39 | 0.044 | 11,192.9 |
 
-*Table 5. Fully adjusted and comorbidity-adjusted DSST models fitted on the identical 1,350 participants, so that the covariate set is the only difference between the paired rows. Both burdens are standardised to one standard deviation within this sample; medication count is per medicine.*
+*Table 5. Fully adjusted and comorbidity-adjusted DSST models fitted on the identical 1,431 participants, so that the covariate set is the only difference between the paired rows. Both burdens are standardised to one standard deviation within this sample; medication count is per medicine.*
 
-The comparison holds up. On the same participants, comorbidity adjustment moved burden by less than a tenth of a point under Boustani and by almost nothing under IACB, while cutting the medication-count estimate by 41% and 34% respectively. The direction is the same under both; that count crosses the significance threshold under one (p=0.072) and stays just inside it under the other (p=0.041) reflects where each estimate started, not a disagreement between the scales. What the comorbidities absorb is part of what medication count was carrying, not what burden was carrying, consistent with count acting partly as a marker of how many chronic conditions a person has and with burden measuring something those variables do not capture.
+The comparison holds up. On the same participants, comorbidity adjustment moved burden by less than a tenth of a point under Boustani and by almost nothing under IACB, while cutting the medication-count estimate by 39% and 34% respectively. The attenuation is near identical under both scales, and count remains just inside the conventional threshold in each (p=0.046 and p=0.044). What the comorbidities absorb is part of what medication count was carrying, not what burden was carrying, consistent with count acting partly as a marker of how many chronic conditions a person has and with burden measuring something those variables do not capture.
 
-Excluding the 152 participants who reported a prior stroke (M6) attenuated the burden estimate slightly, to −1.23 points (95% CI −1.89 to −0.57; p=0.001), but it remained clearly significant, so the association is not driven solely by participants whose cognition was affected by cerebrovascular disease.
+Excluding the 152 participants who reported a prior stroke (M6) attenuated the burden estimate slightly, to −1.23 points (95% CI −1.89 to −0.57; p=0.001), but it remained clearly significant, so the association is not driven by participants whose cognition was affected by cerebrovascular disease.
 
 ## 3.5 Sensitivity to informative missingness
 
@@ -255,7 +255,7 @@ Given the pattern in Section 3.3, the fully adjusted model was refitted using in
 
 The pattern for animal fluency (Table 6) was directionally consistent with DSST but weaker. Medication count alone (M1) was associated with a 0.25-point lower score per medicine (95% CI −0.41 to −0.09; p=0.005), and burden alone (M2) with a 0.57-point lower score per unit (95% CI −0.85 to −0.28; p<0.001). With both in the model (M3), each retained an independent association: burden −0.31 (95% CI −0.58 to −0.04; p=0.025) and count −0.18 (95% CI −0.36 to −0.00; p=0.050).
 
-In the fully adjusted model (M4), burden was associated with a 0.31-point lower fluency score (95% CI −0.54 to −0.07; p=0.013) but medication count was not (−0.09, 95% CI −0.25 to 0.07; p=0.250); for this outcome it was burden, not count, that tracked cognition. The category analysis (M5a) showed an association only at high burden (ACB 3+: −1.31, 95% CI −2.23 to −0.40; p=0.008). With comorbidities added (M4+), burden held (−0.28, 95% CI −0.51 to −0.04; p=0.027), so the fluency finding, while weaker than the DSST finding, is not driven by comorbid illness either.
+In the fully adjusted model (M4), burden was associated with a 0.31-point lower fluency score (95% CI −0.54 to −0.07; p=0.013) but medication count was not (−0.09, 95% CI −0.25 to 0.07; p=0.250); for this outcome it was burden, not count, that tracked cognition. The category analysis (M5a) showed an association only at high burden (ACB 3+: −1.31, 95% CI −2.23 to −0.40; p=0.008). With comorbidities added (M4+), burden held (−0.27, 95% CI −0.52 to −0.01; p=0.041), so the fluency finding, while weaker than the DSST finding, is not driven by comorbid illness either.
 
 | Model | Term | Estimate | 95% CI | p | n |
 | --- | --- | --- | --- | --- | --- |
@@ -265,7 +265,7 @@ In the fully adjusted model (M4), burden was associated with a 0.31-point lower 
 | M3: ACB + count | Medicines | −0.18 | −0.36, −0.00 | 0.050 | 1,661 |
 | M4: fully adjusted | ACB burden | −0.31 | −0.54, −0.07 | 0.013 | 1,533 |
 | M4: fully adjusted | Medicines | −0.09 | −0.25, 0.07 | 0.250 | 1,533 |
-| M4+: + comorbidities | ACB burden | −0.28 | −0.51, −0.04 | 0.027 | 1,397 |
+| M4+: + comorbidities | ACB burden | −0.27 | −0.52, −0.01 | 0.041 | 1,481 |
 | M5a: ACB category (ref. ACB 0) | ACB 1–2 | −0.11 | −0.86, 0.63 | 0.748 | 1,533 |
 | M5a: ACB category (ref. ACB 0) | ACB 3+ | −1.31 | −2.23, −0.40 | 0.008 | 1,533 |
 | M5b: high-potency count | High-potency drugs | −0.99 | −1.84, −0.14 | 0.026 | 1,533 |
@@ -288,8 +288,8 @@ Among the 91 single-ingredient names scored by both lists, the scales assigned e
 | M5a: category 1–2 | vs burden 0 | −2.67 (−5.14, −0.20) p=0.036 | not fitted |
 | M5a: category 3+ | vs burden 0 | −5.62 (−7.90, −3.34) p<0.001 | not fitted |
 | M5b: high-potency | Per top-score drug | −2.54 (−4.48, −0.61) p=0.013 | −1.66 (−3.37, +0.05) p=0.057 |
-| M4+: + comorbidities | Burden | −1.36 (−1.91, −0.81) p<0.001 | −0.50 (−0.87, −0.12) p=0.013 |
-| M4+: + comorbidities | Medicines | −0.32 (−0.66, +0.03) p=0.072 | −0.40 (−0.79, −0.02) p=0.041 |
+| M4+: + comorbidities | Burden | −1.34 (−1.87, −0.81) p<0.001 | −0.55 (−0.94, −0.16) p=0.009 |
+| M4+: + comorbidities | Medicines | −0.33 (−0.65, −0.01) p=0.046 | −0.39 (−0.77, −0.01) p=0.044 |
 | M4-IPW | Burden | −1.31 (−1.85, −0.77) p<0.001 | −0.57 (−0.95, −0.20) p=0.005 |
 
 *Table 7. DSST models under both anticholinergic scales, same participants and same specification, with unlisted drugs contributing nothing to either burden. Coefficients are points of DSST score per unit of the stated exposure and are not comparable in magnitude between scales, because IACB scores each drug 0 to 4 and Boustani 0 to 3; Table 8 puts them on a common footing. The categorical specification was fitted for Boustani only, for the reason given in Section 2.5.*
@@ -343,7 +343,7 @@ That holds under both scoring instruments. Rerun with IACB through the same cros
 
 ## 4.2 Anticholinergic burden versus polypharmacy
 
-The M4 to M4+ comparison is one of this dissertation's most informative results for the "beyond polypharmacy" question, and it only became interpretable once both models were fitted on the same 1,350 participants. Adding comorbidities then moved burden barely at all under either scale while cutting the medication-count estimate by a third or more. One reading is that count is partly a proxy for how many chronic conditions a person has, so measuring those conditions directly strips out much of its apparent association with cognition. Burden did not behave like such a proxy under either scale, which is consistent with a specifically pharmacological explanation, though a cross-sectional design cannot rule out an unmeasured factor tracking burden more closely than count.
+The M4 to M4+ comparison is one of this dissertation's most informative results for the "beyond polypharmacy" question, and it only became interpretable once both models were fitted on the same 1,431 participants. Adding comorbidities then moved burden barely at all under either scale while cutting the medication-count estimate by a third or more. One reading is that count is partly a proxy for how many chronic conditions a person has, so measuring those conditions directly strips out much of its apparent association with cognition. Burden did not behave like such a proxy under either scale, which is consistent with a specifically pharmacological explanation, though a cross-sectional design cannot rule out an unmeasured factor tracking burden more closely than count.
 
 Where the scales genuinely part company is in whom each describes. In the unadjusted head-to-head with medication count, Boustani burden survived and IACB burden did not, even when both were restricted to the drugs the two lists share. But the stratified analysis inverts that ordering at the top of the medication range: among participants on ten or more medicines, IACB burden was the only one of the two associated with DSST and the only one that materially improved model fit. Since both scales describe the same participants taking the same medicines, the difference can only come from which drugs each counts as anticholinergic, and how heavily. The practical implication is not that one instrument is better, but that choosing between them is not neutral with respect to the population being studied.
 
@@ -537,8 +537,8 @@ IACB but not under Boustani.
 | M5a: category 1–2 | vs burden 0 | −0.11 (p=0.748) | not fitted |
 | M5a: category 3+ | vs burden 0 | −1.31 (p=0.008) | not fitted |
 | M5b: high-potency | Per top-score drug | −0.99 (p=0.026) | −0.62 (p=0.126) |
-| M4+: + comorbidities | Burden | −0.28 (p=0.027) | −0.17 (p=0.037) |
-| M4+: + comorbidities | Medicines | −0.04 (p=0.600) | −0.02 (p=0.804) |
+| M4+: + comorbidities | Burden | −0.27 (p=0.041) | −0.18 (p=0.036) |
+| M4+: + comorbidities | Medicines | −0.04 (p=0.546) | −0.02 (p=0.835) |
 
 *Table D1. Animal fluency models under both anticholinergic scales, corrected crosswalk, unlisted drugs contributing nothing. Coefficients are points of fluency score per unit of exposure and are not comparable in magnitude between scales. The categorical specification was fitted for Boustani only (Section 2.5).*
 

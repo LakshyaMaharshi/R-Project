@@ -172,6 +172,43 @@ top_both <- sum(both_single$boustani_score == 3 & both_single$iacb_score == 4)
 cat(sprintf("top-of-scale (Boustani 3 & IACB 4): %d | agreement counting those: %d/%d (%.1f%%)\n",
             top_both, agree + top_both, nrow(both_single), 100*(agree+top_both)/nrow(both_single)))
 
+# Every figure above is quoted in the dissertation but until now existed ONLY here, in
+# console output. Nothing held them, so the number-verification script could not check
+# them and they would have gone stale silently the next time the scoring rules moved -
+# which is the exact way the last two bugs got through. Write them to a file so they are
+# checkable like every other number.
+coverage <- bind_rows(
+  lapply(c("boustani", "iacb"), function(sc) {
+    fnd <- rx60[[paste0(substr(sc,1,1), "_found")]]
+    unr <- rx60[[paste0(substr(sc,1,1), "_unresolved")]]
+    partial <- rx60$is_combination & unr > 0 & fnd > 0
+    ppl <- if (sc == "boustani") pp$b else pp$i
+    data.frame(
+      scale                 = if (sc == "boustani") "Boustani ACB (0-3)" else "IACB (0-4)",
+      prescriptions         = length(fnd),
+      rx_on_list            = sum(fnd > 0),
+      pct_rx_on_list        = 100 * mean(fnd > 0),
+      rx_partial_combo      = sum(partial),
+      pct_rx_partial_combo  = 100 * mean(partial),
+      participants          = nrow(pp),
+      ppl_partial_combo     = sum(ppl),
+      pct_ppl_partial_combo = 100 * mean(ppl),
+      row.names = NULL)
+  }))
+write.csv(coverage, file.path(out_dir, "crosswalk_coverage.csv"), row.names = FALSE)
+
+concordance <- data.frame(
+  n_scored_by_both   = nrow(both_single),
+  n_exact_agree      = agree,
+  pct_exact_agree    = 100 * agree / nrow(both_single),
+  spearman_rho       = cor(both_single$boustani_score, both_single$iacb_score,
+                           method = "spearman"),
+  n_top_of_scale     = top_both,
+  n_agree_incl_top   = agree + top_both,
+  pct_agree_incl_top = 100 * (agree + top_both) / nrow(both_single),
+  row.names = NULL)
+write.csv(concordance, file.path(out_dir, "scale_concordance.csv"), row.names = FALSE)
+
 ## 4. person-level exposures ----------------------------------------------------
 # Primary exposure under rules (1) and (2): sum of every identified component's score,
 # with unlisted drugs and unidentified components contributing 0.
@@ -197,9 +234,16 @@ if (file.exists(xpt("MCQ"))) {
   como <- left_join(como, mcq %>% transmute(SEQN, stroke = yn(MCQ160F),
     cvd = pmax(yn(MCQ160B), yn(MCQ160C), yn(MCQ160D), yn(MCQ160E), na.rm = TRUE)), by = "SEQN")
 }
+# DIQ010: 1 = yes, 2 = no, 3 = borderline, 7 = refused, 9 = don't know.
+# Borderline is a real answer, not a missing one, and it is not a diagnosis of diabetes,
+# so it is coded 0 alongside "no". The previous code routed it through yn(), which sent it
+# to NA - contradicting the comment sitting directly above it and dropping 97 people
+# (2013-2014) and 62 (2011-2012) out of every comorbidity model for no reason. Dr Sami
+# spotted the mismatch on 21 Aug. Refused and don't know remain genuinely missing.
+diabetes_code <- function(x) ifelse(x == 1, 1L, ifelse(x %in% c(2, 3), 0L, NA_integer_))
 if (file.exists(xpt("DIQ"))) {
   como <- left_join(como, read_xpt(xpt("DIQ")) %>%
-                      transmute(SEQN, diabetes = yn(DIQ010)), by = "SEQN")
+                      transmute(SEQN, diabetes = diabetes_code(DIQ010)), by = "SEQN")
 }
 if (file.exists(xpt("DPQ"))) {
   dpq <- read_xpt(xpt("DPQ"))
@@ -279,6 +323,18 @@ cat(sprintf("mean burden: Boustani %.2f (max %g) | IACB %.2f (max %g)\n",
             mean(analysis$iacb_burden[analysis$in_sample]), max(analysis$iacb_burden[analysis$in_sample])))
 cat("\nmedication bands (common sample):\n")
 print(table(analysis$med_band[analysis$in_sample]))
+
+# The SDs and the burden means are quoted in Sections 2.5 and 3.7, so they belong in a
+# file too - same reason as the coverage block above.
+write.csv(data.frame(
+  scale     = c("Boustani ACB (0-3)", "IACB (0-4)"),
+  sd_burden = c(sd_acb, sd_iacb),
+  mean_burden = c(mean(analysis$acb_burden[analysis$in_sample]),
+                  mean(analysis$iacb_burden[analysis$in_sample])),
+  max_burden  = c(max(analysis$acb_burden[analysis$in_sample]),
+                  max(analysis$iacb_burden[analysis$in_sample])),
+  n_common    = sum(analysis$in_sample), row.names = NULL),
+  file.path(out_dir, "burden_standardisation.csv"), row.names = FALSE)
 
 ## 5. model machinery ------------------------------------------------------------
 tidy_term <- function(fit, term, model, outcome, scale_lab, coding, n, dfree) {

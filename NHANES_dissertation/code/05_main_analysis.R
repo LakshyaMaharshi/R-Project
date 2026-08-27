@@ -116,8 +116,18 @@ if (file.exists(mcq_path)) {
 diq_path <- xpt("DIQ")
 if (file.exists(diq_path)) {
   diq <- read_xpt(diq_path)
-  # DIQ010: 1 yes, 2 no, 3 borderline, 7/9 missing. counting borderline as no.
-  como <- left_join(como, diq %>% transmute(SEQN, diabetes = yn(DIQ010)), by = "SEQN")
+  # DIQ010: 1 = yes, 2 = no, 3 = borderline, 7 = refused, 9 = don't know.
+  # Borderline is a real answer, not a missing one, and it is not a diagnosis of diabetes,
+  # so it is coded 0 alongside "no". The previous code routed it through yn(), which sent it
+  # to NA - contradicting the comment sitting directly above it and dropping 97 people
+  # (2013-2014) and 62 (2011-2012) out of every comorbidity model for no reason. Dr Sami
+  # spotted the mismatch on 21 Aug. Refused and don't know remain genuinely missing.
+  diabetes_code <- function(x) ifelse(x == 1, 1L, ifelse(x %in% c(2, 3), 0L, NA_integer_))
+  como <- left_join(como, diq %>% transmute(SEQN, diabetes = diabetes_code(DIQ010)),
+                    by = "SEQN")
+  cat(sprintf("  DIQ010 borderline (=3) coded as no diabetes: %d participants
+",
+              sum(diq$DIQ010 == 3, na.rm = TRUE)))
   cat("DIQ loaded - got diabetes\n")
 } else {
   como$diabetes <- NA_integer_

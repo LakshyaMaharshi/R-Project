@@ -8,8 +8,8 @@
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M5a: burden category","CFDDS","acb_catACB 1-2",-0.890504324317915,-3.19829212496636,1.41728347633053,0.426837451336391,1288
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M5a: burden category","CFDDS","acb_catACB 3+",-1.78253246992571,-6.51302699921685,2.94796205936542,0.437564225633603,1288
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M5b: high-potency","CFDDS","n_highpot_acb",-3.15129150973864,-6.79700740275807,0.494424383280794,0.0858304592441045,1288
-"(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4+: + comorbidities","CFDDS","acb_burden",-0.865174191071159,-2.05916210727569,0.328813725133371,0.144709422660426,1221
-"(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4+: + comorbidities","CFDDS","n_drugs",-0.147527331491284,-0.709495713904368,0.4144410509218,0.586882349448396,1221
+"(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4+: + comorbidities","CFDDS","acb_burden",-0.86382930457445,-1.99702130226256,0.269362693113659,0.126180162980245,1268
+"(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4+: + comorbidities","CFDDS","n_drugs",-0.135818678723615,-0.640120823646588,0.368483466199359,0.577317664017841,1268
 "(a) primary: unlisted contributes 0","IACB (0-4)","M1: count alone","CFDDS","n_drugs",-1.36053160671751,-1.8426272615883,-0.87843595184672,1.56976395760434e-05,1422
 "(a) primary: unlisted contributes 0","IACB (0-4)","M2: burden alone","CFDDS","iacb_burden",-1.2345352441904,-1.85353701000144,-0.615533478379361,0.000591569182678597,1422
 "(a) primary: unlisted contributes 0","IACB (0-4)","M3: burden + count","CFDDS","iacb_burden",0.0228732230798695,-0.569456880279935,0.615203326439674,0.936018165773858,1422
@@ -17,8 +17,8 @@
 "(a) primary: unlisted contributes 0","IACB (0-4)","M4: fully adjusted","CFDDS","iacb_burden",-0.502673546542395,-0.993637323466056,-0.0117097696187347,0.0453337713395415,1288
 "(a) primary: unlisted contributes 0","IACB (0-4)","M4: fully adjusted","CFDDS","n_drugs",-0.513093403587796,-0.858624780558423,-0.16756202661717,0.00606081371550305,1288
 "(a) primary: unlisted contributes 0","IACB (0-4)","M5b: high-potency","CFDDS","n_highpot_iacb",-1.12351904227508,-4.10963907488849,1.86260099033833,0.438245611433952,1288
-"(a) primary: unlisted contributes 0","IACB (0-4)","M4+: + comorbidities","CFDDS","iacb_burden",-0.599741110638359,-1.09188107331269,-0.107601147964031,0.0198287718979928,1221
-"(a) primary: unlisted contributes 0","IACB (0-4)","M4+: + comorbidities","CFDDS","n_drugs",-0.100544001895367,-0.571458148014986,0.370370144224251,0.658068777528362,1221
+"(a) primary: unlisted contributes 0","IACB (0-4)","M4+: + comorbidities","CFDDS","iacb_burden",-0.600290899672479,-1.05985868732198,-0.140723112022979,0.0135011753479926,1268
+"(a) primary: unlisted contributes 0","IACB (0-4)","M4+: + comorbidities","CFDDS","n_drugs",-0.0887673660681347,-0.508363123418111,0.330828391281841,0.660984122575325,1268
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M1: count alone","CFDAST","n_drugs",-0.353266687702749,-0.440149944347905,-0.266383431057594,1.39292810062298e-07,1449
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M2: burden alone","CFDAST","acb_burden",-0.673998360169109,-0.887543612349106,-0.460453107989113,4.02906969574292e-06,1449
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M3: burden + count","CFDAST","acb_burden",-0.288693071114825,-0.600523655367153,0.0231375131375035,0.0674487956256823,1449
@@ -28,8 +28,8 @@
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M5a: burden category","CFDAST","acb_catACB 1-2",-0.0417216920167184,-1.12067640239011,1.03723301835667,0.935930633695086,1303
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M5a: burden category","CFDAST","acb_catACB 3+",-0.373572048700393,-1.72043424465497,0.97329014725418,0.566108418947645,1303
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M5b: high-potency","CFDAST","n_highpot_acb",-0.62381011537395,-1.7127069493246,0.465086718576705,0.243330915766394,1303
-"(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4+: + comorbidities","CFDAST","acb_burden",-0.153611015343652,-0.574375043070472,0.267153012383169,0.451727090947128,1235
-"(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4+: + comorbidities","CFDAST","n_drugs",-0.0855637275321563,-0.348260404939847,0.177132949875534,0.501228372248222,1235
+"(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4+: + comorbidities","CFDAST","acb_burden",-0.139034812050455,-0.530766496564345,0.252696872463436,0.464199400077152,1286
+"(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4+: + comorbidities","CFDAST","n_drugs",-0.103351619092298,-0.338930161606281,0.132226923421685,0.367604955115661,1286
 "(a) primary: unlisted contributes 0","IACB (0-4)","M1: count alone","CFDAST","n_drugs",-0.353266687702749,-0.440149944347905,-0.266383431057594,1.39292810062298e-07,1449
 "(a) primary: unlisted contributes 0","IACB (0-4)","M2: burden alone","CFDAST","iacb_burden",-0.249524037256031,-0.390606704492868,-0.108441370019193,0.00166030428363777,1449
 "(a) primary: unlisted contributes 0","IACB (0-4)","M3: burden + count","CFDAST","iacb_burden",0.1225439764943,-0.0991199950390844,0.344207948027684,0.259562214992801,1449
@@ -37,8 +37,8 @@
 "(a) primary: unlisted contributes 0","IACB (0-4)","M4: fully adjusted","CFDAST","iacb_burden",0.0101500294041089,-0.174934698293423,0.195234757101641,0.909244388579886,1303
 "(a) primary: unlisted contributes 0","IACB (0-4)","M4: fully adjusted","CFDAST","n_drugs",-0.19251710138544,-0.331523435602715,-0.0535107671681643,0.00950856418139109,1303
 "(a) primary: unlisted contributes 0","IACB (0-4)","M5b: high-potency","CFDAST","n_highpot_iacb",0.575939929516216,-0.170380006705889,1.32225986573832,0.121881110254673,1303
-"(a) primary: unlisted contributes 0","IACB (0-4)","M4+: + comorbidities","CFDAST","iacb_burden",-0.0365992499063448,-0.271199847633151,0.198001347820461,0.74606625413671,1235
-"(a) primary: unlisted contributes 0","IACB (0-4)","M4+: + comorbidities","CFDAST","n_drugs",-0.110467278945924,-0.359353576434301,0.138419018542453,0.36216326556648,1235
+"(a) primary: unlisted contributes 0","IACB (0-4)","M4+: + comorbidities","CFDAST","iacb_burden",-0.0104742360396893,-0.225085184380002,0.204136712300623,0.919190919527979,1286
+"(a) primary: unlisted contributes 0","IACB (0-4)","M4+: + comorbidities","CFDAST","n_drugs",-0.135885968045152,-0.359835688189006,0.088063752098701,0.217677781085549,1286
 "(a) primary: unlisted contributes 0","Boustani ACB (0-3)","M4-IPW","CFDDS","acb_burden",-0.852512533541556,-1.98870053903187,0.283675471948758,0.131834841283209,1288
 "(a) primary: unlisted contributes 0","IACB (0-4)","M4-IPW","CFDDS","iacb_burden",-0.506510588166951,-0.98932125698385,-0.0236999193500531,0.0408343555121517,1288
 "(b) drugs on both lists only","Boustani ACB (0-3)","M3: burden + count","CFDDS","acb_common",-1.0476527537117,-2.07404165290762,-0.0212638545157724,0.0459231523674868,1422
