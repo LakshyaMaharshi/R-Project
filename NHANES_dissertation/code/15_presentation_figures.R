@@ -3,6 +3,12 @@
 # Dr Sami, 21 Aug: "I would also consider adding more plots (and improve their quality as
 # you could use those directly in your PPT)."
 #
+# Revised 27 Aug to his figure brief: make the main DSST plot bigger, cut the M4/M4+ figure
+# to the key estimates only, enlarge the scale-agreement plot and put concrete drug examples
+# on it, and keep the medication-stratified result explicitly exploratory. The file names
+# now run in his slide order (cohort, DSST, M4/M4+, scales, robustness, exploratory) so the
+# folder can be worked through top to bottom while building the deck.
+#
 # These are sized and styled for slides rather than for a page: 16:9 proportions, larger
 # type, fewer elements per plot, and the key number annotated on the plot itself so it can
 # be read from the back of a room. Everything is drawn from the result CSVs - no model is
@@ -51,6 +57,12 @@ save_ppt <- function(name, plot, w = 12, h = 6.75) {   # 16:9
 }
 star <- function(p) ifelse(p < 0.001, "***", ifelse(p < 0.01, "**", ifelse(p < 0.05, "*", "")))
 
+# ggplot does NOT wrap a long caption or subtitle - it runs it off the right edge and
+# silently clips it, which is how two of these went out with the last words missing.
+# Wrap explicitly at a width that fits the 12in canvas.
+wrap <- function(s, n = 105) paste(strwrap(s, width = n), collapse = "
+")
+
 cat("\npresentation figures ->", normalizePath(ppt_dir, winslash = "/", mustWork = FALSE), "\n")
 
 ## ===========================================================================
@@ -93,7 +105,7 @@ p1 <- ggplot(d1, aes(x = estimate, y = cycle_lab, colour = sig)) +
                        "a significant result in one with a non-significant result in the other.")) +
   expand_limits(x = 1.1) +
   ppt_theme
-save_ppt("ppt1_cycle_interaction.png", p1)
+save_ppt("ppt5_cycle_interaction.png", p1)
 
 ## ===========================================================================
 ## P2. M4 burden across the three outcomes, both cycles
@@ -120,7 +132,7 @@ p2 <- ggplot(out, aes(x = estimate, y = cycle_lab, colour = sig)) +
        x = "Change in test score per ACB unit (95% CI)", y = NULL,
        caption = "Each panel has its own x scale: DSST runs to about 130 points, CERAD recall to 10.") +
   ppt_theme
-save_ppt("ppt2_outcomes_by_cycle.png", p2)
+save_ppt("ppt7_outcomes_by_cycle.png", p2)
 
 ## ===========================================================================
 ## P3. Medication band - where IACB does the work
@@ -155,47 +167,78 @@ p3 <- ggplot(mb, aes(x = estimate, y = cycle_lab, colour = sig)) +
   geom_point(size = 3.6) +
   facet_grid(band ~ scale) +
   scale_colour_manual(values = c("p < 0.05" = COL_SIG, "not significant" = COL_NS), name = NULL) +
-  labs(title = "IACB is the scale that holds at high medication counts",
+  labs(title = "Exploratory: the scale that tracks DSST may depend on medication count",
        subtitle = paste("Fully adjusted DSST models within each medication band,",
-                        "burdens standardised to 1 SD."),
+                        "burdens standardised to 1 SD. Exploratory, not a primary result."),
        x = "Change in DSST per 1 SD of burden (95% CI)", y = NULL,
-       caption = paste("The 10-or-more band is small in both cycles (103 and 88),",
-                       "so it is indicative rather than conclusive.")) +
+       caption = paste("Treat as hypothesis-generating. Splitting the sample three ways",
+                       "leaves only 103 and 88 participants in the 10-or-more band,",
+                       "
+which is why those intervals are so wide.")) +
   ppt_theme + theme(strip.text.y = element_text(size = 12, angle = 0, lineheight = 1.2))
-save_ppt("ppt3_medication_bands.png", p3, h = 7.6)
+save_ppt("ppt6_medication_bands_exploratory.png", p3, h = 7.6)
 
 ## ===========================================================================
-## P4. Scale disagreement, both cycles
+## P4. Scale disagreement, with concrete drugs  (Dr Sami, 27 Aug)
 ## ===========================================================================
-# Drawn from each cycle's own drug-level table. Single-ingredient names only, and only
-# those each scale positively recognises - the same b_found/i_found test the crosswalk
-# uses, not !is.na(score), which would sweep in every drug on neither list.
-grid <- bind_rows(lapply(c(PRIMARY, VALIDATE), function(cy) {
-  need("drug_level_corrected.csv", file.path(base_dir, "outputs", cy, "tables")) %>%
-    filter(is_combination %in% c(FALSE, "FALSE"), b_found > 0, i_found > 0) %>%
-    count(boustani_score, iacb_score, name = "n_drugs") %>%
-    mutate(cycle = cy)
-}))
-agree <- grid %>% group_by(cycle) %>%
-  summarise(pct = 100 * sum(n_drugs[boustani_score == iacb_score]) / sum(n_drugs),
-            tot = sum(n_drugs), .groups = "drop") %>%
-  mutate(lab = sprintf("%s: %d drugs, %.0f%% agree", cycle, tot, pct))
+# One cycle rather than two. He asked for this one enlarged with a few real drug examples,
+# and a 2x2 facet of heatmaps leaves no room for either. The dissertation cycle carries the
+# argument; the validation cycle agrees closely (22% exact agreement in both) and that is
+# said in the subtitle rather than drawn again.
+#
+# Single-ingredient names only, and only those each scale positively recognises - the same
+# b_found/i_found test the crosswalk uses, not !is.na(score), which would sweep in every
+# drug that is on neither list and sit them all in the 0,0 cell.
+dl <- need("drug_level_corrected.csv", file.path(base_dir, "outputs", PRIMARY, "tables")) %>%
+  filter(is_combination %in% c(FALSE, "FALSE"), b_found > 0, i_found > 0)
 
-p4 <- ggplot(grid, aes(x = factor(boustani_score), y = factor(iacb_score), fill = n_drugs)) +
-  geom_tile(colour = "white", linewidth = 1.1) +
-  geom_text(aes(label = n_drugs), size = 4.6,
+grid <- dl %>% count(boustani_score, iacb_score, name = "n_drugs")
+agree_pct <- 100 * sum(grid$n_drugs[grid$boustani_score == grid$iacb_score]) / sum(grid$n_drugs)
+
+# The most-used drug in each cell, so a label names something the audience recognises
+# rather than the alphabetically first obscure one.
+top_drug <- dl %>% group_by(boustani_score, iacb_score) %>%
+  slice_max(n_users, n = 1, with_ties = FALSE) %>%
+  ungroup() %>% select(boustani_score, iacb_score, drug, n_users)
+
+# Curated cells. Data-driven labelling of every off-diagonal cell would put 14 names on the
+# plot and none of them would be read. These five carry the argument: the two commonest
+# drugs in the whole sample disagree in OPPOSITE directions, the scales' top scores do not
+# line up, and paroxetine is the most extreme single disagreement.
+HIGHLIGHT <- data.frame(boustani_score = c(1, 0, 0, 3, 3),
+                        iacb_score     = c(0, 1, 2, 4, 1))
+lab <- HIGHLIGHT %>% inner_join(top_drug, by = c("boustani_score", "iacb_score")) %>%
+  inner_join(grid, by = c("boustani_score", "iacb_score")) %>%
+  # A dark red label on the darkest tile cannot be read, so flip to a light colour on
+  # the dark tiles - the same threshold the count text uses.
+  mutate(txt = sprintf("%s (%d)", drug, n_users),
+         lab_col = ifelse(n_drugs > max(grid$n_drugs) * 0.55, "#ffe0d8", "#7d2b1f"))
+
+p4 <- ggplot(grid, aes(x = factor(boustani_score), y = factor(iacb_score))) +
+  geom_tile(aes(fill = n_drugs), colour = "white", linewidth = 1.4) +
+  geom_text(aes(label = n_drugs), size = 6.2, fontface = "bold", nudge_y = 0.20,
             colour = ifelse(grid$n_drugs > max(grid$n_drugs) * 0.55, "white", "grey15")) +
-  facet_wrap(~ cycle) +
+  geom_text(data = lab, aes(label = txt, colour = I(lab_col)), inherit.aes = TRUE,
+            nudge_y = -0.24, size = 3.9, fontface = "italic") +
   scale_fill_gradient(low = "#eaf0f6", high = COL_SIG, name = "Drugs") +
-  labs(title = "The two scales often score the same drug differently",
-       subtitle = paste0("Drugs on the diagonal agree. ",
-                         paste(agree$lab, collapse = "   |   "), "."),
+  labs(title = "The two scales disagree about the drugs people actually take",
+       subtitle = wrap(sprintf(paste("%d single-ingredient drugs scored by both scales;",
+                                     "only %.0f%% agree exactly (the diagonal).",
+                                     "NHANES %s; 2011-2012 gives 22%% as well."),
+                               sum(grid$n_drugs), agree_pct, PRIMARY), 110),
        x = "Boustani ACB score", y = "IACB score",
-       caption = paste("The ranges differ (0-3 against 0-4), so a drug both scales call",
+       caption = paste("Metoprolol and metformin are the two most-used drugs in the sample",
+                       "and the scales disagree about them in opposite directions.",
+                       "\nThe ranges also differ (0-3 against 0-4), so a drug both scales call",
                        "maximally anticholinergic sits off the diagonal at 3 and 4.")) +
-  coord_equal() +
-  ppt_theme + theme(panel.grid = element_blank())
-save_ppt("ppt4_scale_disagreement.png", p4, h = 7.0)
+  # No coord_equal here. Square tiles force the panel to a fixed aspect, which on a 16:9
+  # canvas centres a narrow panel and leaves a band of white space down each side - and the
+  # title and caption, which lay out against the panel, then run off the edge and clip.
+  # Rectangular tiles fill the slide and give the drug labels room to sit inside a cell.
+  ppt_theme +
+  theme(panel.grid = element_blank(),
+        plot.title.position = "plot", plot.caption.position = "plot")
+save_ppt("ppt4_scale_disagreement.png", p4, w = 12, h = 7.4)
 
 ## ===========================================================================
 ## P5. Sample sizes
@@ -223,7 +266,111 @@ p5 <- ggplot(fl, aes(x = n, y = step, fill = cycle)) +
        x = "Participants", y = NULL) +
   ppt_theme + theme(panel.grid.major.y = element_blank(),
                     panel.grid.major.x = element_line(linewidth = 0.25, colour = "grey88"))
-save_ppt("ppt5_sample_flow.png", p5, h = 6.2)
+save_ppt("ppt1_sample_flow.png", p5, h = 6.2)
 
-cat("\n5 presentation figures written.\n")
+## ===========================================================================
+## P2. THE MAIN DSST RESULT  (Dr Sami, 27 Aug: "make the main DSST plot bigger")
+## ===========================================================================
+# The headline slide. One message, few marks, numbers big enough to read from the back:
+# DSST falls as burden rises, and the fully adjusted estimate is printed on the panel so
+# the descriptive gradient and the adjusted result are never separated.
+pdir  <- file.path(base_dir, "outputs", PRIMARY, "tables")
+t1    <- need("table1_by_acb_category.csv", pdir)
+tcrit <- need("design_df.csv", pdir)$t_crit_95[1]
+ddf   <- need("design_df.csv", pdir)$degf[1]
+m4    <- need("models_dsst_primary.csv", pdir) %>%
+           filter(model == "M4: fully adjusted", term == "acb_burden")
+
+# n per category among those the weighted means actually describe: 60+ with a valid DSST.
+ncat <- need("analysis_dataset_clean.csv", pdir) %>%
+  filter(!is.na(CFDDS)) %>% count(acb_cat, name = "n")
+
+CATS <- c("ACB 0", "ACB 1-2", "ACB 3+")
+dr <- data.frame(cat = t1$acb_cat, mean = t1$CFDDS, se = t1[["se.CFDDS"]]) %>%
+  left_join(ncat, by = c("cat" = "acb_cat")) %>%
+  mutate(cat = factor(cat, levels = CATS,
+                      labels = c("None", "Low to moderate", "High")),
+         lo = mean - tcrit * se, hi = mean + tcrit * se)
+
+p2b <- ggplot(dr, aes(x = cat, y = mean, group = 1)) +
+  geom_line(linewidth = 0.9, colour = "grey70", linetype = "22") +
+  geom_errorbar(aes(ymin = lo, ymax = hi), width = 0.09, linewidth = 1.0, colour = "grey35") +
+  geom_point(size = 7, colour = COL_SIG) +
+  geom_text(aes(label = sprintf("%.1f", mean)), hjust = -0.55, size = 6.4,
+            fontface = "bold", colour = COL_SIG) +
+  geom_text(aes(y = lo, label = sprintf("n = %s", format(n, big.mark = ","))),
+            vjust = 2.4, size = 4.3, colour = "grey40") +
+  scale_x_discrete(labels = c("None" = "None\n(ACB 0)",
+                              "Low to moderate" = "Low to moderate\n(ACB 1-2)",
+                              "High" = "High\n(ACB 3+)")) +
+  scale_y_continuous(expand = expansion(mult = c(0.14, 0.10))) +
+  labs(title = "Processing speed falls as anticholinergic burden rises",
+       subtitle = wrap(sprintf(paste("Survey-weighted mean DSST, NHANES %s, adults aged 60",
+                                     "and over. 95%% CI on %d design degrees of freedom."),
+                               PRIMARY, ddf)),
+       x = "Anticholinergic burden (Boustani ACB)",
+       y = "Weighted mean DSST score",
+       caption = wrap(sprintf(paste("Fully adjusted for age, sex, race, education, income AND",
+                                    "medication count: %.2f DSST points per ACB unit",
+                                    "(95%% CI %.2f to %.2f, p < 0.001, n = %s).",
+                                    "The gradient is not explained by taking more medicines."),
+                              m4$estimate, m4$ci_lower, m4$ci_upper,
+                              format(m4$n_used, big.mark = ",")))) +
+  ppt_theme +
+  theme(panel.grid.major.x = element_blank(),
+        axis.text.x = element_text(size = 15, lineheight = 1.1))
+save_ppt("ppt2_dsst_main.png", p2b, h = 7.0)
+
+## ===========================================================================
+## P3. M4 vs M4+, KEY ESTIMATES ONLY  (Dr Sami, 27 Aug)
+## ===========================================================================
+# He asked for this cut back to the key estimates, so it is four numbers: burden and
+# medication count, each before and after the comorbidities, on identical participants.
+# Boustani only - this slide is about adjustment, not about the scales, and IACB behaves
+# the same way (it is in compare_standardised.csv if it is asked about).
+pair <- need("m4_vs_m4plus_same_sample.csv", pdir) %>% filter(scale == "Boustani ACB")
+n_pair  <- pair$n[1]
+is_plus <- grepl("comorbidities", pair$model)
+
+mm <- bind_rows(
+  pair %>% transmute(model, est = burden, lo = burden_lo, hi = burden_hi, p = burden_p,
+                     term = "Anticholinergic burden (per 1 SD)"),
+  pair %>% transmute(model, est = count,  lo = count_lo,  hi = count_hi,  p = count_p,
+                     term = "Medication count (per medicine)")) %>%
+  mutate(model = factor(ifelse(grepl("comorbidities", model),
+                               "M4+  with comorbidities", "M4   without"),
+                        levels = c("M4+  with comorbidities", "M4   without")),
+         term = factor(term, levels = c("Anticholinergic burden (per 1 SD)",
+                                        "Medication count (per medicine)")),
+         sig = ifelse(p < 0.05, "p < 0.05", "not significant"))
+
+# Computed, not typed, so the caption cannot drift from the estimates plotted above it.
+b4 <- pair$burden[!is_plus]; b4p <- pair$burden[is_plus]
+c4 <- pair$count[!is_plus];  c4p <- pair$count[is_plus]
+cut_pct <- 100 * (1 - abs(c4p) / abs(c4))
+
+p3b <- ggplot(mm, aes(x = est, y = model, colour = sig)) +
+  geom_vline(xintercept = 0, linetype = "22", colour = COL_REF, linewidth = 0.6) +
+  geom_errorbar(aes(xmin = lo, xmax = hi), orientation = "y", width = 0.12, linewidth = 1.0) +
+  geom_point(size = 5) +
+  geom_text(aes(label = sprintf("%.2f%s", est, star(p))), vjust = -1.5, size = 5.4,
+            show.legend = FALSE) +
+  facet_wrap(~ term, scales = "free_x") +
+  scale_colour_manual(values = c("p < 0.05" = COL_SIG, "not significant" = COL_NS), name = NULL) +
+  scale_y_discrete(expand = expansion(add = 0.8)) +
+  labs(title = "Comorbidities absorb medication count, not burden",
+       subtitle = wrap(sprintf(paste("The same %s participants in both models, so the",
+                                     "covariates are the only change. Boustani ACB, %s."),
+                               format(n_pair, big.mark = ","), PRIMARY)),
+       x = "Change in DSST score (95% CI)", y = NULL,
+       caption = wrap(sprintf(paste("Adding stroke, cardiovascular disease, diabetes,",
+                                    "depression and self-rated health changes burden by",
+                                    "%.2f points, but cuts medication count by %.0f%%, to the",
+                                    "edge of significance. This is the evidence that burden",
+                                    "carries information medication count does not."),
+                              abs(b4p - b4), cut_pct))) +
+  ppt_theme + theme(panel.grid.major.y = element_blank(),
+                    panel.grid.major.x = element_line(linewidth = 0.25, colour = "grey88"))
+save_ppt("ppt3_m4_vs_m4plus.png", p3b, h = 6.4)
+cat("\n7 presentation figures written, in slide order.\n")
 cat("All are drawn from the result CSVs, so they cannot disagree with the tables.\n")
